@@ -1,0 +1,5 @@
+E:\Work\AdminSite\AdminSite\bin\AdminSite.dll
+E:\Work\AdminSite\AdminSite\bin\AdminSite.pdb
+E:\Work\AdminSite\AdminSite\obj\Debug\ResolveAssemblyReference.cache
+E:\Work\AdminSite\AdminSite\obj\Debug\AdminSite.dll
+E:\Work\AdminSite\AdminSite\obj\Debug\AdminSite.pdb

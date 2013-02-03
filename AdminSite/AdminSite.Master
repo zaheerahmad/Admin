@@ -1,0 +1,36 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminSite.master.cs" Inherits="AdminSite.AdminSite" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head runat="server">
+        <title>AdminSite :: Control Panel</title>
+        <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen"/>
+        <link href="assets/bootstrap/css/bootstrap-responsive.css" rel="stylesheet"/>
+        <script src="assets/Scripts/jquery-1.4.1.min.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div class="row">
+            <div class="span12">
+                <img src="assets/images/Control Panel.png" alt="" class="img-rounded" />
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span2">
+                    <asp:ContentPlaceHolder ID="cphSideBar" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <div class="span10">
+                    <asp:ContentPlaceHolder ID="cphMainContentArea" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span12">
+                
+            </div>
+        </div>
+    </body>
+</html>
