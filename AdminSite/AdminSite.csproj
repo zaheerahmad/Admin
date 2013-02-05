@@ -107,7 +107,9 @@
     <Content Include="CodeGen\Generators.aspx" />
     <Content Include="CodeGen\style.css" />
     <Content Include="assets\Styles\Site.css" />
+    <Content Include="Controls\ctlAddServices.ascx" />
     <Content Include="Controls\ctlLogin.ascx" />
+    <Content Include="Controls\ctlManageServices.ascx" />
     <Content Include="Controls\ctlWelcome.ascx" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
@@ -175,12 +177,26 @@
     </Compile>
     <Compile Include="Common\Common.cs" />
     <Compile Include="Controls\ControlSettings.cs" />
+    <Compile Include="Controls\ctlAddServices.ascx.cs">
+      <DependentUpon>ctlAddServices.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ctlAddServices.ascx.designer.cs">
+      <DependentUpon>ctlAddServices.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Controls\ctlLogin.ascx.cs">
       <DependentUpon>ctlLogin.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Controls\ctlLogin.ascx.designer.cs">
       <DependentUpon>ctlLogin.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ctlManageServices.ascx.cs">
+      <DependentUpon>ctlManageServices.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ctlManageServices.ascx.designer.cs">
+      <DependentUpon>ctlManageServices.ascx</DependentUpon>
     </Compile>
     <Compile Include="Controls\ctlWelcome.ascx.cs">
       <DependentUpon>ctlWelcome.ascx</DependentUpon>
@@ -190,6 +206,7 @@
       <DependentUpon>ctlWelcome.ascx</DependentUpon>
     </Compile>
     <Compile Include="Dao\LoginController.cs" />
+    <Compile Include="Dao\ServiceController.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -201,6 +218,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Model\Login.cs" />
+    <Compile Include="Model\Service.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>

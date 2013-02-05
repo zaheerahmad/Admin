@@ -6,7 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using TTD.Common;
 using AdminSite.Controls;
-using AdminSite.Common;
+
 namespace AdminSite
 {
     public partial class Admin : System.Web.UI.Page
@@ -20,7 +20,7 @@ namespace AdminSite
             //}
             //else
             //{
-                Utility.LoadPageContent(this.PlaceHolder1, ControlSettings.GetControlFileName((ControlSettings.ControlName)control, Global.ControlsPath));
+            Utility.LoadPageContent(this.PlaceHolder1, ControlSettings.GetControlFileName((ControlSettings.ControlName)control, Global.ControlsPath));
             //}
         }
     }

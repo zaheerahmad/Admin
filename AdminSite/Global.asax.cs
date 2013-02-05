@@ -18,12 +18,19 @@ namespace AdminSite
         public enum PageLink : int
         {
             Login = 0,
-            Welcome = 1
+            Welcome = 1,
+            AddServices = 2,
+            ManageServices = 3
         }
 
         public const string ControlsPath = "~/Controls/";
         public const string MainPageName = "Admin.aspx";
         public const string ErrorLogin = "*Error - Invalid User/Password";
+        public const string ServicesImages = "~/upload/ServicesImages/";
+        public const string ErrorLabelStatus = "Request couldn't be completed due to an error. Error: ";
+        public const string SuccessLabelStatus = "Request created Successfully!";
+        public const string UpdatedLabelStatus = "Request Updated Successfully!";
+
         //public const string stControlsPath = "~/st/Controls/";
         //public const string teControlsPath = "~/te/Controls/";
         //public const string AdmissionControlsPath = "~/Admission/Controls/";
@@ -58,6 +65,12 @@ namespace AdminSite
                     break;
                 case PageLink.Welcome:
                     qry = "ctl=1";
+                    break;
+                case PageLink.AddServices:
+                    qry = "ctl=2";
+                    break;
+                case PageLink.ManageServices:
+                    qry = "ctl=3";
                     break;
                 default:
                     qry = "ctl=0";

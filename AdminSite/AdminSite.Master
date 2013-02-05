@@ -10,21 +10,15 @@
         <script src="assets/Scripts/jquery-1.4.1.min.js" type="text/javascript"></script>
     </head>
     <body>
-        <div class="row">
+<%--        <div class="row">
             <div class="span12">
                 <img src="assets/images/Control Panel.png" alt="" class="img-rounded" />
             </div>
-        </div>
+        </div>--%>
         <div class="container-fluid">
             <div class="row-fluid">
-                <div class="span2">
-                    <asp:ContentPlaceHolder ID="cphSideBar" runat="server">
-                    </asp:ContentPlaceHolder>
-                </div>
-                <div class="span10">
-                    <asp:ContentPlaceHolder ID="cphMainContentArea" runat="server">
-                    </asp:ContentPlaceHolder>
-                </div>
+                <asp:ContentPlaceHolder ID="cphMainContentArea" runat="server">
+                </asp:ContentPlaceHolder>
             </div>
         </div>
         <div class="row">

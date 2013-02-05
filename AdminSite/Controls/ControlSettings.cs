@@ -11,8 +11,8 @@ namespace AdminSite.Controls
         {
             Login = 0,
             Welcome = 1,
-            ManageEvents = 2,
-            Addjquery = 3,
+            AddServices = 2,
+            ManageServices = 3,
             ManageJquery = 4,
             AddDegree = 5,
             ManageDegree = 6,
@@ -36,12 +36,12 @@ namespace AdminSite.Controls
                 case ControlName.Welcome:
                     controlName = "ctlWelcome";
                     break;
-                //case ControlName.ManageEvents:
-                //    controlName = "ctlManageEvents";
-                //    break;
-                //case ControlName.Addjquery:
-                //    controlName = "AddJquery";
-                //    break;
+                case ControlName.AddServices:
+                    controlName = "ctlAddServices";
+                    break;
+                case ControlName.ManageServices:
+                    controlName = "ctlManageServices";
+                    break;
                 //case ControlName.ManageJquery:
                 //    controlName = "ctlManageJquery";
                 //    break;

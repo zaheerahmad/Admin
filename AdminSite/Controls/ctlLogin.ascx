@@ -1,11 +1,13 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ctlLogin.ascx.cs" Inherits="AdminSite.Controls.ctlLogin" %>
 <link href="~/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen"/>
 <link href="~/assets/bootstrap/css/bootstrap-responsive.css" rel="stylesheet"/>
+
+<div class="span6 offset3">
 <div class="page-header">
     <h1>Please Login Here</h1>
 </div>
 <div class = "row">
-    <div class="offset2">
+    <div>
         <form name="loginForm" class="form-horizontal" runat="server">
           <div class="control-group">
             <label class="control-label" for="inputError">User Name:</label>
@@ -35,4 +37,5 @@
           
         </form>    
     </div>
+</div>
 </div>

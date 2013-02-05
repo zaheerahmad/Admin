@@ -20,6 +20,8 @@ namespace AdminSite.DataAccess
 		
 		public static string Login = @"tblLogin";
         
+		public static string Service = @"tblServices";
+        
 	}
 
 	#endregion
@@ -28,6 +30,12 @@ namespace AdminSite.DataAccess
 		
 		public static TableSchema.Table Login{
             get { return DataService.GetSchema("tblLogin","csmDefaultDB"); }
+
+		}
+
+        
+		public static TableSchema.Table Service{
+            get { return DataService.GetSchema("tblServices","csmDefaultDB"); }
 
 		}
 
