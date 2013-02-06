@@ -18,16 +18,19 @@
               <a class="brand" href="Admin.aspx?ctl=1"><i class="icon-home icon-black"></i>Control Panel</a>
               <ul class="nav">
                 <li>
-                    <a href="Admin.aspx?ctl=2">Services</a>
+                    <a href="Admin.aspx?ctl=5">Services</a>
                 </li>
                 <li>
-                    <a href="#">News</a>
+                    <a href="Admin.aspx?ctl=6">News</a>
                 </li>
                 <li>
                     <a href="#">Events</a>
                 </li>
                 <li>
-                    <a href="#">Current Projects</a>
+                    <a href="Admin.aspx?ctl=8">Clients</a>
+                </li>
+                <li>
+                    <a href="#">Projects</a>
                 </li>
                 <li><a href="Admin.aspx?ctl=0">Sign Out</a></li>
             </div>

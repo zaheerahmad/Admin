@@ -12,7 +12,7 @@
 <div class="span2">
     <ul class="nav nav-list">
       <li class="nav-header">Sercices</li>
-      <li id="home"><a href="#">Home</a></li>
+      <li id="home"><a href="Admin.aspx?ctl=5">Home</a></li>
       <li id="add" class="active"><a href="Admin.aspx?ctl=2">Add Services</a></li>
       <li id="manage"><a href="Admin.aspx?ctl=3">Manage Services</a></li>
     </ul>

@@ -107,16 +107,25 @@
     <Content Include="CodeGen\Generators.aspx" />
     <Content Include="CodeGen\style.css" />
     <Content Include="assets\Styles\Site.css" />
+    <Content Include="Controls\ctlAddClient.ascx" />
+    <Content Include="Controls\ctlAddNews.ascx" />
     <Content Include="Controls\ctlAddServices.ascx" />
+    <Content Include="Controls\ctlClient.ascx" />
     <Content Include="Controls\ctlLogin.ascx" />
+    <Content Include="Controls\ctlManageClient.ascx" />
+    <Content Include="Controls\ctlManageNews.ascx" />
     <Content Include="Controls\ctlManageServices.ascx" />
+    <Content Include="Controls\ctlNews.ascx" />
+    <Content Include="Controls\ctlServices.ascx" />
     <Content Include="Controls\ctlWelcome.ascx" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="assets\Scripts\jquery-1.4.1-vsdoc.js" />
     <Content Include="assets\Scripts\jquery-1.4.1.js" />
     <Content Include="assets\Scripts\jquery-1.4.1.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -177,12 +186,33 @@
     </Compile>
     <Compile Include="Common\Common.cs" />
     <Compile Include="Controls\ControlSettings.cs" />
+    <Compile Include="Controls\ctlAddClient.ascx.cs">
+      <DependentUpon>ctlAddClient.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ctlAddClient.ascx.designer.cs">
+      <DependentUpon>ctlAddClient.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ctlAddNews.ascx.cs">
+      <DependentUpon>ctlAddNews.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ctlAddNews.ascx.designer.cs">
+      <DependentUpon>ctlAddNews.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Controls\ctlAddServices.ascx.cs">
       <DependentUpon>ctlAddServices.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Controls\ctlAddServices.ascx.designer.cs">
       <DependentUpon>ctlAddServices.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ctlClient.ascx.cs">
+      <DependentUpon>ctlClient.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ctlClient.ascx.designer.cs">
+      <DependentUpon>ctlClient.ascx</DependentUpon>
     </Compile>
     <Compile Include="Controls\ctlLogin.ascx.cs">
       <DependentUpon>ctlLogin.ascx</DependentUpon>
@@ -191,12 +221,40 @@
     <Compile Include="Controls\ctlLogin.ascx.designer.cs">
       <DependentUpon>ctlLogin.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Controls\ctlManageClient.ascx.cs">
+      <DependentUpon>ctlManageClient.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ctlManageClient.ascx.designer.cs">
+      <DependentUpon>ctlManageClient.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ctlManageNews.ascx.cs">
+      <DependentUpon>ctlManageNews.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ctlManageNews.ascx.designer.cs">
+      <DependentUpon>ctlManageNews.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Controls\ctlManageServices.ascx.cs">
       <DependentUpon>ctlManageServices.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Controls\ctlManageServices.ascx.designer.cs">
       <DependentUpon>ctlManageServices.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ctlNews.ascx.cs">
+      <DependentUpon>ctlNews.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ctlNews.ascx.designer.cs">
+      <DependentUpon>ctlNews.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ctlServices.ascx.cs">
+      <DependentUpon>ctlServices.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ctlServices.ascx.designer.cs">
+      <DependentUpon>ctlServices.ascx</DependentUpon>
     </Compile>
     <Compile Include="Controls\ctlWelcome.ascx.cs">
       <DependentUpon>ctlWelcome.ascx</DependentUpon>
@@ -206,6 +264,7 @@
       <DependentUpon>ctlWelcome.ascx</DependentUpon>
     </Compile>
     <Compile Include="Dao\LoginController.cs" />
+    <Compile Include="Dao\NewsController.cs" />
     <Compile Include="Dao\ServiceController.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -218,6 +277,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Model\Login.cs" />
+    <Compile Include="Model\News.cs" />
     <Compile Include="Model\Service.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">

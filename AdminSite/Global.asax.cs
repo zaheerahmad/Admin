@@ -20,7 +20,14 @@ namespace AdminSite
             Login = 0,
             Welcome = 1,
             AddServices = 2,
-            ManageServices = 3
+            ManageServices = 3,
+            AddNews = 4,
+            Services = 5,
+            News = 6,
+            ManageNews = 7,
+            Client = 8,
+            AddClient = 9,
+            ManageClient = 10
         }
 
         public const string ControlsPath = "~/Controls/";
@@ -30,6 +37,7 @@ namespace AdminSite
         public const string ErrorLabelStatus = "Request couldn't be completed due to an error. Error: ";
         public const string SuccessLabelStatus = "Request created Successfully!";
         public const string UpdatedLabelStatus = "Request Updated Successfully!";
+        public const string NewsImages = "~/upload/NewsImages/";
 
         //public const string stControlsPath = "~/st/Controls/";
         //public const string teControlsPath = "~/te/Controls/";
@@ -71,6 +79,27 @@ namespace AdminSite
                     break;
                 case PageLink.ManageServices:
                     qry = "ctl=3";
+                    break;
+                case PageLink.AddNews:
+                    qry = "ctl=4";
+                    break;
+                case PageLink.Services:
+                    qry = "ctl=5";
+                    break;
+                case PageLink.News:
+                    qry = "ctl=6";
+                    break;
+                case PageLink.ManageNews:
+                    qry = "ctl=7";
+                    break;
+                case PageLink.Client:
+                    qry = "ctl=8";
+                    break;
+                case PageLink.AddClient:
+                    qry = "ctl=9";
+                    break;
+                case PageLink.ManageClient:
+                    qry = "ctl=10";
                     break;
                 default:
                     qry = "ctl=0";

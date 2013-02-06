@@ -13,13 +13,13 @@ namespace AdminSite.Controls
             Welcome = 1,
             AddServices = 2,
             ManageServices = 3,
-            ManageJquery = 4,
-            AddDegree = 5,
-            ManageDegree = 6,
-            AddSubject = 7,
-            ManageSubjects = 8,
-            AddStudent = 9,
-            ManageStudent = 10,
+            AddNews = 4,
+            Services = 5,
+            News = 6,
+            ManageNews = 7,
+            Client = 8,
+            AddClient = 9,
+            ManageClient = 10,
             AddTeacher = 11,
             ManageTeacher = 12,
             TimeTable = 13,
@@ -42,27 +42,27 @@ namespace AdminSite.Controls
                 case ControlName.ManageServices:
                     controlName = "ctlManageServices";
                     break;
-                //case ControlName.ManageJquery:
-                //    controlName = "ctlManageJquery";
-                //    break;
-                //case ControlName.AddDegree:
-                //    controlName = "ctlAddDegree";
-                //    break;
-                //case ControlName.ManageDegree:
-                //    controlName = "ctlManageDegree";
-                //    break;
-                //case ControlName.AddSubject:
-                //    controlName = "ctlAddSubject";
-                //    break;
-                //case ControlName.ManageSubjects:
-                //    controlName = "ctlManageSubject";
-                //    break;
-                //case ControlName.AddStudent:
-                //    controlName = "ctlAddStudent";
-                //    break;
-                //case ControlName.ManageStudent:
-                //    controlName = "ctlManageStudent";
-                //    break;
+                case ControlName.AddNews:
+                    controlName = "ctlAddNews";
+                    break;
+                case ControlName.Services:
+                    controlName = "ctlServices";
+                    break;
+                case ControlName.News:
+                    controlName = "ctlNews";
+                    break;
+                case ControlName.ManageNews:
+                    controlName = "ctlManageNews";
+                    break;
+                case ControlName.Client:
+                    controlName = "ctlClient";
+                    break;
+                case ControlName.AddClient:
+                    controlName = "ctlAddClient";
+                    break;
+                case ControlName.ManageClient:
+                    controlName = "ctlManageClient";
+                    break;
                 //case ControlName.AddTeacher:
                 //    controlName = "ctlAddTeacher";
                 //    break;

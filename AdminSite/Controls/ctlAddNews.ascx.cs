@@ -4,48 +4,49 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using TTD.Common;
 using AdminSite.Model;
 using System.IO;
-using TTD.Common;
 
 namespace AdminSite.Controls
 {
-    public partial class ctlAddServices : System.Web.UI.UserControl
+    public partial class ctlAddNews : System.Web.UI.UserControl
     {
-        int serviceId = 0;
+        int newsId = 0;
         protected void Page_Load(object sender, EventArgs e)
         {
             divStatusError.Visible = false;
             divStatusSuccess.Visible = false;
-            serviceId = Utility.GetIntParameter("id");
-            if (serviceId > 0)
+            newsId = Utility.GetIntParameter("id");
+            if (newsId > 0)
             {
-                LoadService(serviceId);
+                LoadNews(newsId);
             }
         }
 
-        protected void btnAddService_Click(object sender, EventArgs e)
+        protected void btnAddNews_Click(object sender, EventArgs e)
         {
             if (Page.IsValid)
             {
-                
-                if (serviceId > 0)
-                {
-                    Service service = new Service(serviceId);
-                    service.IsNew = false;
 
-                    service.ServiceTitle = txtServiceTitle.Text;
-                    service.ServiceDescription = txtServiceDescription.Text;
+                if (newsId > 0)
+                {
+                    News news = new News(newsId);
+                    news.IsNew = false;
+
+                    news.NewsTitle = txtNewsTitle.Text;
+                    news.NewsDescription = txtNewsDescription.Text;
                     try
                     {
-                        service.Save();
-                        UploadPrintableFile(service);
+                        news.Save();
+                        UploadPrintableFile(news);
                         divStatusError.Visible = false;
                         divStatusSuccess.Visible = true;
                         lblStatusSuccess.Text = Global.UpdatedLabelStatus;
                         //lblStatusSuccess.ForeColor = System.Drawing.Color.Green;
                     }
-                    catch (Exception ex) {
+                    catch (Exception ex)
+                    {
                         divStatusSuccess.Visible = false;
                         divStatusError.Visible = true;
                         labelStatusError.Text = Global.ErrorLabelStatus + ex.ToString();
@@ -58,7 +59,7 @@ namespace AdminSite.Controls
                     {
                         Save();
                     }
-                    catch(Exception ex)
+                    catch (Exception ex)
                     {
                         divStatusSuccess.Visible = false;
                         divStatusError.Visible = true;
@@ -66,28 +67,28 @@ namespace AdminSite.Controls
                     }
                 }
             }
-            
+
         }
 
-        string UploadPrintableFile(Service service)
+        string UploadPrintableFile(News news)
         {
 
-            string NewFileName = service.ServiceId + "-" + Path.GetFileName(fuServicePicture.PostedFile.FileName);
-            string FileNameWithoutExt = service.ServiceId + "-" + Path.GetFileNameWithoutExtension(fuServicePicture.PostedFile.FileName);
+            string NewFileName = news.NewsId + "-" + Path.GetFileName(fuNewsPicture.PostedFile.FileName);
+            string FileNameWithoutExt = news.NewsId + "-" + Path.GetFileNameWithoutExtension(fuNewsPicture.PostedFile.FileName);
             string error;
-            if (fuServicePicture.PostedFile.ContentLength > 1)
+            if (fuNewsPicture.PostedFile.ContentLength > 1)
             {
-                Utility.DeleteFile(Global.ServicesImages + service.ServiceImage);
-                if (Utility.UploadFile(fuServicePicture, FileNameWithoutExt, Global.ServicesImages, out error))
+                Utility.DeleteFile(Global.NewsImages + news.NewsImage);
+                if (Utility.UploadFile(fuNewsPicture, FileNameWithoutExt, Global.NewsImages, out error))
                 {
-                    service = new Service(Service.Columns.ServiceId, service.ServiceId);
-                    service.IsNew = false;
-                    service.ServiceImage = NewFileName;
-                    service.Save(Guid.NewGuid());
+                    news = new News(News.Columns.NewsId, news.NewsId);
+                    news.IsNew = false;
+                    news.NewsImage = NewFileName;
+                    news.Save(Guid.NewGuid());
                 }
                 else
                 {
-                    Service.Destroy(service.ServiceId);
+                    Service.Destroy(news.NewsId);
                     return error.ToString();
                 }
             }
@@ -96,31 +97,31 @@ namespace AdminSite.Controls
 
         public void ClearForm()
         {
-            txtServiceTitle.Text = "";
-            txtServiceDescription.Text = "";
-            fuServicePicture.Dispose();
+            txtNewsTitle.Text = "";
+            txtNewsDescription.Text = "";
+            fuNewsPicture.Dispose();
         }
 
-        public void LoadService(int pServiceId)
+        public void LoadNews(int pNewsId)
         {
-            Service service = new Service(pServiceId);
-            txtServiceTitle.Text = service.ServiceTitle;
-            txtServiceDescription.Text = service.ServiceDescription;
+            News news = new News(pNewsId);
+            txtNewsTitle.Text = news.NewsTitle;
+            txtNewsDescription.Text = news.NewsDescription;
         }
 
         public void Save()
         {
-            string serviceTitle = txtServiceTitle.Text;
-            string serviceDescription = txtServiceDescription.Text;
+            string newsTitle = txtNewsTitle.Text;
+            string newsDescription = txtNewsDescription.Text;
 
-            Service service = new Service();
-            service.IsNew = true;
-            service.ServiceTitle = serviceTitle;
-            service.ServiceDescription = serviceDescription;
-            service.Save();
+            News news = new News();
+            news.IsNew = true;
+            news.NewsTitle = newsTitle;
+            news.NewsDescription = newsDescription;
+            news.Save();
 
             //Now Save Picture As Well..
-            string result = UploadPrintableFile(service);
+            string result = UploadPrintableFile(news);
             if (result.Equals(""))
             {
                 divStatusError.Visible = false;
@@ -137,6 +138,5 @@ namespace AdminSite.Controls
             }
             ClearForm();
         }
-
     }
 }

@@ -20,6 +20,8 @@ namespace AdminSite.DataAccess
 		
 		public static string Login = @"tblLogin";
         
+		public static string News = @"tblNews";
+        
 		public static string Service = @"tblServices";
         
 	}
@@ -30,6 +32,12 @@ namespace AdminSite.DataAccess
 		
 		public static TableSchema.Table Login{
             get { return DataService.GetSchema("tblLogin","csmDefaultDB"); }
+
+		}
+
+        
+		public static TableSchema.Table News{
+            get { return DataService.GetSchema("tblNews","csmDefaultDB"); }
 
 		}
 
