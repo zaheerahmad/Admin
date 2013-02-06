@@ -20,31 +20,16 @@
                 <li>
                     <a href="Admin.aspx?ctl=2">Services</a>
                 </li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Clients</a></li>
-                <li><a href="#">Status</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Services<b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                          <li><a href="#">Add New Service</a></li>
-                          <li><a href="#">Manage Service</a></li>
-                        </ul>
+                <li>
+                    <a href="#">News</a>
                 </li>
-              </ul>
-
- 
-                <form class="navbar-search pull-left">
-                  <input type="text" class="search-query" placeholder="Search">
-                </form>
-
-              <!-- Everything you want hidden at 940px or less, place within here -->
-              <div class="nav-collapse collapse">
-                <!-- .nav, .navbar-search, .navbar-form, etc -->
-                <ul class="nav">
-                    <li><a href="Admin.aspx?ctl=0">Sign Out</a></li>
-                </ul>
-              </div>
- 
+                <li>
+                    <a href="#">Events</a>
+                </li>
+                <li>
+                    <a href="#">Current Projects</a>
+                </li>
+                <li><a href="Admin.aspx?ctl=0">Sign Out</a></li>
             </div>
           </div>
         </div>

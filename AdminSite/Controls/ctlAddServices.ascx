@@ -22,7 +22,14 @@
       <h1>Services<small> Add Service</small></h1>
     </div>
     <form name="frmAddService" class="form-horizontal" runat="server">
-        <asp:Label ID="lblStatus" runat="server"></asp:Label>
+        <div class="alert alert-error" id="divStatusError" runat="server">
+            <asp:Label ID="labelStatusError" runat="server"></asp:Label>
+        </div>
+        <div class="alert alert-success" id="divStatusSuccess" runat="server">
+          <asp:Label ID="lblStatusSuccess" runat="server"></asp:Label>
+        </div>
+        
+        
       <div class="control-group">
         <label class="control-label" for="txtServiceTitle">Service Title</label>
         <div class="controls">

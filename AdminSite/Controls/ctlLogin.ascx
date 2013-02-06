@@ -8,6 +8,9 @@
 </div>
 <div class = "row">
     <div>
+         <div class="alert alert-error" id="divStatusError" runat="server">
+            <asp:Label ID="lblError" runat="server"></asp:Label>
+        </div>
         <form name="loginForm" class="form-horizontal" runat="server">
           <div class="control-group">
             <label class="control-label" for="inputError">User Name:</label>
@@ -31,7 +34,7 @@
               <asp:Button class="btn" Text="Sign in" runat="server" type="submit" 
                     ID="btnSignIn" onclick="btnSignIn_Click" /><br />
               <%--<button type="submit" class="btn" onclick="ButtonSignIn_Click">Sign in</button>--%>
-              <asp:Label ID="lblError" ForeColor="Red" Font-Bold="true" runat="server"></asp:Label>
+              
             </div>
           </div>
           

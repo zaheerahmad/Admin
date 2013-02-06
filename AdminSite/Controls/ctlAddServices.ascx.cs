@@ -15,6 +15,8 @@ namespace AdminSite.Controls
         int serviceId = 0;
         protected void Page_Load(object sender, EventArgs e)
         {
+            divStatusError.Visible = false;
+            divStatusSuccess.Visible = false;
             serviceId = Utility.GetIntParameter("id");
             if (serviceId > 0)
             {
@@ -34,12 +36,34 @@ namespace AdminSite.Controls
 
                     service.ServiceTitle = txtServiceTitle.Text;
                     service.ServiceDescription = txtServiceDescription.Text;
-                    service.Save();
-                    lblStatus.Text = Global.UpdatedLabelStatus;
-                    lblStatus.ForeColor = System.Drawing.Color.Green;
+                    try
+                    {
+                        service.Save();
+                        divStatusError.Visible = false;
+                        divStatusSuccess.Visible = true;
+                        lblStatusSuccess.Text = Global.UpdatedLabelStatus;
+                        //lblStatusSuccess.ForeColor = System.Drawing.Color.Green;
+                    }
+                    catch (Exception ex) {
+                        divStatusSuccess.Visible = false;
+                        divStatusError.Visible = true;
+                        labelStatusError.Text = Global.ErrorLabelStatus + ex.ToString();
+                        //labelStatusError.ForeColor = System.Drawing.Color.Red;
+                    }
                 }
                 else
-                    Save();
+                {
+                    try
+                    {
+                        Save();
+                    }
+                    catch(Exception ex)
+                    {
+                        divStatusSuccess.Visible = false;
+                        divStatusError.Visible = true;
+                        labelStatusError.Text = Global.ErrorLabelStatus + ex.ToString();
+                    }
+                }
             }
             
         }
@@ -98,13 +122,17 @@ namespace AdminSite.Controls
             string result = UploadPrintableFile(service);
             if (result.Equals(""))
             {
-                lblStatus.Text = Global.SuccessLabelStatus;
-                lblStatus.ForeColor = System.Drawing.Color.Green;
+                divStatusError.Visible = false;
+                divStatusSuccess.Visible = true;
+                lblStatusSuccess.Text = Global.SuccessLabelStatus;
+                //lblStatusSuccess.ForeColor = System.Drawing.Color.Green;
             }
             else
             {
-                lblStatus.Text = Global.ErrorLabelStatus + result;
-                lblStatus.ForeColor = System.Drawing.Color.Red;
+                divStatusSuccess.Visible = false;
+                divStatusError.Visible = true;
+                labelStatusError.Text = Global.ErrorLabelStatus + result;
+                //labelStatusError.ForeColor = System.Drawing.Color.Red;
             }
             ClearForm();
         }

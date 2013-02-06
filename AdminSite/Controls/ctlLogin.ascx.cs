@@ -15,6 +15,7 @@ namespace AdminSite.Controls
         protected void Page_Load(object sender, EventArgs e)
         {
             Common.Common.showSideBar = false;
+            divStatusError.Visible = false;
             if (!IsPostBack)
             {
                 ClearForm();
@@ -43,6 +44,7 @@ namespace AdminSite.Controls
                 }
                 else
                 {
+                    divStatusError.Visible = true;
                     lblError.Text = Global.ErrorLogin;
                 }
             }

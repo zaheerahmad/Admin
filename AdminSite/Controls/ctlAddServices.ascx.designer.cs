@@ -13,13 +13,40 @@ namespace AdminSite.Controls {
     public partial class ctlAddServices {
         
         /// <summary>
-        /// lblStatus control.
+        /// divStatusError control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblStatus;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divStatusError;
+        
+        /// <summary>
+        /// labelStatusError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label labelStatusError;
+        
+        /// <summary>
+        /// divStatusSuccess control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divStatusSuccess;
+        
+        /// <summary>
+        /// lblStatusSuccess control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblStatusSuccess;
         
         /// <summary>
         /// txtServiceTitle control.
