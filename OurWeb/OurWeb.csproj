@@ -1,0 +1,607 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BE59684B-6FB1-46C2-80CE-76EBD810D3A1}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OurWeb</RootNamespace>
+    <AssemblyName>OurWeb</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=1.0.10123.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Admin\trunk\AdminSite\bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Anthem, Version=1.5.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Admin\trunk\AdminSite\bin\Anthem.dll</HintPath>
+    </Reference>
+    <Reference Include="eWorld.UI, Version=2.0.4.2327, Culture=neutral, PublicKeyToken=24d65337282035f2, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Admin\trunk\AdminSite\bin\eWorld.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="GMDatePicker, Version=0.9.2592.39607, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Admin\trunk\AdminSite\bin\GMDatePicker.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="SubSonic, Version=2.0.3.0, Culture=neutral, PublicKeyToken=eadb47849839a332, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Admin\trunk\AdminSite\bin\SubSonic.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="TTD.Common, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Admin\trunk\AdminSite\bin\TTD.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="TTD.Web.Providers, Version=1.0.3028.22297, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Admin\trunk\AdminSite\bin\TTD.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="wwHoverPanel, Version=1.60.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Admin\trunk\AdminSite\bin\wwHoverPanel.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Account\ChangePassword.aspx" />
+    <Content Include="Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="Admin\About.aspx" />
+    <Content Include="Admin\Admin.aspx" />
+    <Content Include="Admin\AdminDB_log.LDF" />
+    <Content Include="Admin\AdminSite.csproj" />
+    <Content Include="Admin\AdminSite.csproj.user" />
+    <Content Include="Admin\assets\bootstrap\css\bootstrap-responsive.css" />
+    <Content Include="Admin\assets\bootstrap\css\bootstrap-responsive.min.css" />
+    <Content Include="Admin\assets\bootstrap\css\bootstrap.css" />
+    <Content Include="Admin\assets\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Admin\assets\bootstrap\img\glyphicons-halflings-white.png" />
+    <Content Include="Admin\assets\bootstrap\img\glyphicons-halflings.png" />
+    <Content Include="Admin\assets\bootstrap\js\bootstrap.js" />
+    <Content Include="Admin\assets\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Admin\assets\images\Control Panel.png" />
+    <Content Include="Admin\assets\Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Admin\assets\Scripts\jquery-1.4.1.js" />
+    <Content Include="Admin\assets\Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Admin\assets\Styles\Site.css" />
+    <Content Include="CodeGen\ClassGenerator.ascx" />
+    <Content Include="CodeGen\ConfigBuilder.ascx" />
+    <Content Include="CodeGen\Configuration.aspx" />
+    <Content Include="CodeGen\Generators.aspx" />
+    <Content Include="CodeGen\style.css" />
+    <Content Include="Admin\Controls\ctlAddClient.ascx" />
+    <Content Include="Admin\Controls\ctlAddNews.ascx" />
+    <Content Include="Admin\Controls\ctlAddServices.ascx" />
+    <Content Include="Admin\Controls\ctlClient.ascx" />
+    <Content Include="Admin\Controls\ctlLogin.ascx" />
+    <Content Include="Admin\Controls\ctlManageClient.ascx" />
+    <Content Include="Admin\Controls\ctlManageNews.ascx" />
+    <Content Include="Admin\Controls\ctlManageServices.ascx" />
+    <Content Include="Admin\Controls\ctlNews.ascx" />
+    <Content Include="Admin\Controls\ctlServices.ascx" />
+    <Content Include="Admin\Controls\ctlWelcome.ascx" />
+    <Content Include="Admin\Default.aspx" />
+    <Content Include="Admin\Global.asax" />
+    <Content Include="App_Data\AdminDB.mdf" />
+    <Content Include="App_Data\AdminDB_log.ldf">
+      <DependentUpon>AdminDB.mdf</DependentUpon>
+    </Content>
+    <Content Include="assets\bootstrap\css\bootstrap-responsive.css" />
+    <Content Include="assets\bootstrap\css\bootstrap-responsive.min.css" />
+    <Content Include="assets\bootstrap\css\bootstrap.css" />
+    <Content Include="assets\bootstrap\css\bootstrap.min.css" />
+    <Content Include="assets\bootstrap\img\glyphicons-halflings-white.png" />
+    <Content Include="assets\bootstrap\img\glyphicons-halflings.png" />
+    <Content Include="assets\bootstrap\js\bootstrap.js" />
+    <Content Include="assets\bootstrap\js\bootstrap.min.js" />
+    <Content Include="assets\css\style.css" />
+    <Content Include="assets\images\about1.jpg" />
+    <Content Include="assets\images\about2.jpg" />
+    <Content Include="assets\images\arrow-blue.gif" />
+    <Content Include="assets\images\arrow-orange.gif" />
+    <Content Include="assets\images\bg-body.jpg" />
+    <Content Include="assets\images\bg-bottom.jpg" />
+    <Content Include="assets\images\bg-footer.jpg" />
+    <Content Include="assets\images\bg-header.jpg" />
+    <Content Include="assets\images\bg-page.jpg" />
+    <Content Include="assets\images\bg-rotator.jpg" />
+    <Content Include="assets\images\box-bg.jpg" />
+    <Content Include="assets\images\box-title.jpg" />
+    <Content Include="assets\images\button-blue.png" />
+    <Content Include="assets\images\button-rss.png" />
+    <Content Include="assets\images\button-standard.png" />
+    <Content Include="assets\images\chart-arrow1.png" />
+    <Content Include="assets\images\chart-arrow2.png" />
+    <Content Include="assets\images\chart-icons.jpg" />
+    <Content Include="assets\images\comments-li.jpg" />
+    <Content Include="assets\images\comments-text-span.jpg" />
+    <Content Include="assets\images\contact.jpg" />
+    <Content Include="assets\images\filters-bg.png" />
+    <Content Include="assets\images\filters-current.jpg" />
+    <Content Include="assets\images\form-input-text.jpg" />
+    <Content Include="assets\images\form-input-textarea.jpg" />
+    <Content Include="assets\images\form-reply-input-text.jpg" />
+    <Content Include="assets\images\form-reply-input-textarea.jpg" />
+    <Content Include="assets\images\ico1.jpg" />
+    <Content Include="assets\images\ico2.jpg" />
+    <Content Include="assets\images\ico3.jpg" />
+    <Content Include="assets\images\ico4.jpg" />
+    <Content Include="assets\images\ico5.jpg" />
+    <Content Include="assets\images\ico6.jpg" />
+    <Content Include="assets\images\img1.png" />
+    <Content Include="assets\images\img19.jpg" />
+    <Content Include="assets\images\img2.jpg" />
+    <Content Include="assets\images\img20.jpg" />
+    <Content Include="assets\images\img3.jpg" />
+    <Content Include="assets\images\img4.jpg" />
+    <Content Include="assets\images\img5.jpg" />
+    <Content Include="assets\images\img6.jpg" />
+    <Content Include="assets\images\img7.jpg" />
+    <Content Include="assets\images\infobox-blue-p.png" />
+    <Content Include="assets\images\infobox-blue-span.png" />
+    <Content Include="assets\images\infobox-blue.jpg" />
+    <Content Include="assets\images\infobox-green-p.png" />
+    <Content Include="assets\images\infobox-green-span.png" />
+    <Content Include="assets\images\infobox-green.jpg" />
+    <Content Include="assets\images\infobox-orange-p.png" />
+    <Content Include="assets\images\infobox-orange-span.png" />
+    <Content Include="assets\images\infobox-orange.jpg" />
+    <Content Include="assets\images\infobox-red-p.png" />
+    <Content Include="assets\images\infobox-red-span.png" />
+    <Content Include="assets\images\infobox-red.jpg" />
+    <Content Include="assets\images\lightbox-bg.jpg" />
+    <Content Include="assets\images\lightbox-close.png" />
+    <Content Include="assets\images\list-arrows-blue-small.png" />
+    <Content Include="assets\images\list-arrows-blue.png" />
+    <Content Include="assets\images\list-arrows-green.png" />
+    <Content Include="assets\images\list-arrows-grey.png" />
+    <Content Include="assets\images\list-arrows-orange.png" />
+    <Content Include="assets\images\list-checked.png" />
+    <Content Include="assets\images\list-dots-blue.png" />
+    <Content Include="assets\images\list-dots-grey.png" />
+    <Content Include="assets\images\list-toggle-arrow-down.png" />
+    <Content Include="assets\images\list-toggle-arrow-right.png" />
+    <Content Include="assets\images\login-box.png" />
+    <Content Include="assets\images\login.png" />
+    <Content Include="assets\images\loginbox-input-submit.jpg" />
+    <Content Include="assets\images\loginbox-input-text.jpg" />
+    <Content Include="assets\images\logo.png" />
+    <Content Include="assets\images\newsletter-input-submit.jpg" />
+    <Content Include="assets\images\newsletter-input-text.jpg" />
+    <Content Include="assets\images\pagination-a.png" />
+    <Content Include="assets\images\postimg1.jpg" />
+    <Content Include="assets\images\postimg2.jpg" />
+    <Content Include="assets\images\postimg3.jpg" />
+    <Content Include="assets\images\read-more-large.png" />
+    <Content Include="assets\images\read-more-small.png" />
+    <Content Include="assets\images\rotator-controls.png" />
+    <Content Include="assets\images\rotator-prev-next.png" />
+    <Content Include="assets\images\rotator\slide1.jpg" />
+    <Content Include="assets\images\rotator\slide2.jpg" />
+    <Content Include="assets\images\rotator\slide3.jpg" />
+    <Content Include="assets\images\rotator\slide4.jpg" />
+    <Content Include="assets\images\rotator\slide5.jpg" />
+    <Content Include="assets\images\search-input-submit.jpg" />
+    <Content Include="assets\images\search-input-text.jpg" />
+    <Content Include="assets\images\services\img_bottom1.jpg" />
+    <Content Include="assets\images\services\img_bottom2.jpg" />
+    <Content Include="assets\images\services\img_bottom3.jpg" />
+    <Content Include="assets\images\services\img_bottom4.jpg" />
+    <Content Include="assets\images\singlepost.jpg" />
+    <Content Include="assets\images\social-icons-mini.png" />
+    <Content Include="assets\images\social-icons.png" />
+    <Content Include="assets\images\sub-menu-current.jpg" />
+    <Content Include="assets\images\table-1.jpg" />
+    <Content Include="assets\images\table-2.jpg" />
+    <Content Include="assets\images\table-3.jpg" />
+    <Content Include="assets\images\table-4.jpg" />
+    <Content Include="assets\images\table-5.jpg" />
+    <Content Include="assets\images\table-best-value.png" />
+    <Content Include="assets\images\tabs-nav-li.jpg" />
+    <Content Include="assets\images\tag.png" />
+    <Content Include="assets\images\team\team1.jpg" />
+    <Content Include="assets\images\team\team10.jpg" />
+    <Content Include="assets\images\team\team2.jpg" />
+    <Content Include="assets\images\team\team3.jpg" />
+    <Content Include="assets\images\team\team4.jpg" />
+    <Content Include="assets\images\team\team5.jpg" />
+    <Content Include="assets\images\team\team6.jpg" />
+    <Content Include="assets\images\team\team7.jpg" />
+    <Content Include="assets\images\team\team8.jpg" />
+    <Content Include="assets\images\team\team9.jpg" />
+    <Content Include="assets\images\testimonials-li-author.jpg" />
+    <Content Include="assets\images\testimonials-li-text.jpg" />
+    <Content Include="assets\images\tooltip-cloud.png" />
+    <Content Include="assets\images\top-menu-a.jpg" />
+    <Content Include="assets\images\top-menu-sub.jpg" />
+    <Content Include="assets\images\type-icons.png" />
+    <Content Include="assets\images\welcome.jpg" />
+    <Content Include="assets\images\works\branding\item1.jpg" />
+    <Content Include="assets\images\works\branding\item10.jpg" />
+    <Content Include="assets\images\works\branding\item11.jpg" />
+    <Content Include="assets\images\works\branding\item12.jpg" />
+    <Content Include="assets\images\works\branding\item14.jpg" />
+    <Content Include="assets\images\works\branding\item2.jpg" />
+    <Content Include="assets\images\works\branding\item3.jpg" />
+    <Content Include="assets\images\works\branding\item4.jpg" />
+    <Content Include="assets\images\works\branding\item5.jpg" />
+    <Content Include="assets\images\works\branding\item6.jpg" />
+    <Content Include="assets\images\works\branding\item7.jpg" />
+    <Content Include="assets\images\works\branding\item8.jpg" />
+    <Content Include="assets\images\works\branding\item9.jpg" />
+    <Content Include="assets\images\works\other\item1.jpg" />
+    <Content Include="assets\images\works\other\item2.jpg" />
+    <Content Include="assets\images\works\other\item3.jpg" />
+    <Content Include="assets\images\works\other\item4.jpg" />
+    <Content Include="assets\images\works\other\item5.jpg" />
+    <Content Include="assets\images\works\other\item6.jpg" />
+    <Content Include="assets\images\works\prev.jpg" />
+    <Content Include="assets\images\works\prev1.jpg" />
+    <Content Include="assets\images\works\prev2.jpg" />
+    <Content Include="assets\images\works\prev3.jpg" />
+    <Content Include="assets\images\works\prev4.jpg" />
+    <Content Include="assets\images\works\print\item1.jpg" />
+    <Content Include="assets\images\works\print\item2.jpg" />
+    <Content Include="assets\images\works\print\item3.jpg" />
+    <Content Include="assets\images\works\print\item4.jpg" />
+    <Content Include="assets\images\works\print\item5.jpg" />
+    <Content Include="assets\images\works\webdesign\item1.jpg" />
+    <Content Include="assets\images\works\webdesign\item10.jpg" />
+    <Content Include="assets\images\works\webdesign\item11.jpg" />
+    <Content Include="assets\images\works\webdesign\item12.jpg" />
+    <Content Include="assets\images\works\webdesign\item13.jpg" />
+    <Content Include="assets\images\works\webdesign\item14.jpg" />
+    <Content Include="assets\images\works\webdesign\item15.jpg" />
+    <Content Include="assets\images\works\webdesign\item16.jpg" />
+    <Content Include="assets\images\works\webdesign\item2.jpg" />
+    <Content Include="assets\images\works\webdesign\item3.jpg" />
+    <Content Include="assets\images\works\webdesign\item4.jpg" />
+    <Content Include="assets\images\works\webdesign\item5.jpg" />
+    <Content Include="assets\images\works\webdesign\item6.jpg" />
+    <Content Include="assets\images\works\webdesign\item7.jpg" />
+    <Content Include="assets\images\works\webdesign\item8.jpg" />
+    <Content Include="assets\images\works\webdesign\item9.jpg" />
+    <Content Include="assets\js\flickr-config.js" />
+    <Content Include="assets\js\googlemap-config.js" />
+    <Content Include="assets\js\jquery-1.5.1.min.js" />
+    <Content Include="assets\js\jquery-workarounds.js" />
+    <Content Include="assets\js\jquery.cycle.all.min.js" />
+    <Content Include="assets\js\jquery.form.js" />
+    <Content Include="assets\js\jquery.pajinate.js" />
+    <Content Include="assets\nivo-slider\demo\images\img14.jpg" />
+    <Content Include="assets\nivo-slider\demo\images\img15.jpg" />
+    <Content Include="assets\nivo-slider\demo\images\img16.jpg" />
+    <Content Include="assets\nivo-slider\demo\images\img17.jpg" />
+    <Content Include="assets\nivo-slider\demo\images\rotator-controls.png" />
+    <Content Include="assets\nivo-slider\jquery.nivo.slider.pack.js" />
+    <Content Include="assets\nivo-slider\nivo-slider.css" />
+    <Content Include="assets\piecemaker2\piecemaker\web\piecemaker.css" />
+    <Content Include="assets\piecemaker2\piecemaker\web\piecemaker.swf" />
+    <Content Include="assets\piecemaker2\piecemaker\web\piecemaker.xml" />
+    <Content Include="assets\piecemaker2\piecemaker\web\scripts\swfobject\swfobject.js" />
+    <Content Include="assets\Styles\Site.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="assets\Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="assets\Scripts\jquery-1.4.1.js" />
+    <Content Include="assets\Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="WebForm1.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.designer.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin.aspx.designer.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminSite.Master.cs">
+      <DependentUpon>AdminSite.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminSite.Master.designer.cs">
+      <DependentUpon>AdminSite.Master</DependentUpon>
+    </Compile>
+    <Compile Include="CodeGen\ClassGenerator.ascx.cs">
+      <DependentUpon>ClassGenerator.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CodeGen\ClassGenerator.ascx.designer.cs">
+      <DependentUpon>ClassGenerator.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CodeGen\ConfigBuilder.ascx.cs">
+      <DependentUpon>ConfigBuilder.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CodeGen\ConfigBuilder.ascx.designer.cs">
+      <DependentUpon>ConfigBuilder.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CodeGen\Configuration.aspx.cs">
+      <DependentUpon>Configuration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CodeGen\Configuration.aspx.designer.cs">
+      <DependentUpon>Configuration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CodeGen\Generators.aspx.cs">
+      <DependentUpon>Generators.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CodeGen\Generators.aspx.designer.cs">
+      <DependentUpon>Generators.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CodeGen\MasterPage.master.cs">
+      <DependentUpon>MasterPage.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CodeGen\MasterPage.master.designer.cs">
+      <DependentUpon>MasterPage.master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Common\Common.cs" />
+    <Compile Include="Admin\Controls\ControlSettings.cs" />
+    <Compile Include="Admin\Controls\ctlAddClient.ascx.cs">
+      <DependentUpon>ctlAddClient.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Controls\ctlAddClient.ascx.designer.cs">
+      <DependentUpon>ctlAddClient.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Controls\ctlAddNews.ascx.cs">
+      <DependentUpon>ctlAddNews.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Controls\ctlAddNews.ascx.designer.cs">
+      <DependentUpon>ctlAddNews.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Controls\ctlAddServices.ascx.cs">
+      <DependentUpon>ctlAddServices.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Controls\ctlAddServices.ascx.designer.cs">
+      <DependentUpon>ctlAddServices.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Controls\ctlClient.ascx.cs">
+      <DependentUpon>ctlClient.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Controls\ctlClient.ascx.designer.cs">
+      <DependentUpon>ctlClient.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Controls\ctlLogin.ascx.cs">
+      <DependentUpon>ctlLogin.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Controls\ctlLogin.ascx.designer.cs">
+      <DependentUpon>ctlLogin.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Controls\ctlManageClient.ascx.cs">
+      <DependentUpon>ctlManageClient.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Controls\ctlManageClient.ascx.designer.cs">
+      <DependentUpon>ctlManageClient.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Controls\ctlManageNews.ascx.cs">
+      <DependentUpon>ctlManageNews.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Controls\ctlManageNews.ascx.designer.cs">
+      <DependentUpon>ctlManageNews.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Controls\ctlManageServices.ascx.cs">
+      <DependentUpon>ctlManageServices.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Controls\ctlManageServices.ascx.designer.cs">
+      <DependentUpon>ctlManageServices.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Controls\ctlNews.ascx.cs">
+      <DependentUpon>ctlNews.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Controls\ctlNews.ascx.designer.cs">
+      <DependentUpon>ctlNews.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Controls\ctlServices.ascx.cs">
+      <DependentUpon>ctlServices.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Controls\ctlServices.ascx.designer.cs">
+      <DependentUpon>ctlServices.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Controls\ctlWelcome.ascx.cs">
+      <DependentUpon>ctlWelcome.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Controls\ctlWelcome.ascx.designer.cs">
+      <DependentUpon>ctlWelcome.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Dao\LoginController.cs" />
+    <Compile Include="Admin\Dao\NewsController.cs" />
+    <Compile Include="Admin\Dao\ServiceController.cs" />
+    <Compile Include="Admin\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Model\Login.cs" />
+    <Compile Include="Admin\Model\News.cs" />
+    <Compile Include="Admin\Model\Service.cs" />
+    <Compile Include="Admin\Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Account\Web.config" />
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\AdminSite.Master" />
+    <Content Include="CodeGen\MasterPage.master" />
+    <Content Include="Admin\Site.Master" />
+    <None Include="assets\css\helveticaneueltcom-ltcno-webfont.eot" />
+    <None Include="assets\css\helveticaneueltcom-ltcno-webfont.ttf" />
+    <None Include="assets\css\helveticaneueltpro-mdcn-webfont.eot" />
+    <None Include="assets\css\helveticaneueltpro-mdcn-webfont.ttf" />
+    <None Include="assets\css\helveticaneueltpro-mdcn-webfont.woff" />
+    <None Include="assets\css\lucida_grande-webfont.eot" />
+    <None Include="assets\css\lucida_grande-webfont.ttf" />
+    <None Include="assets\css\lucida_grande-webfont.woff" />
+    <None Include="assets\css\lucida_grande_bold-webfont.eot" />
+    <None Include="assets\css\lucida_grande_bold-webfont.ttf" />
+    <None Include="assets\css\lucida_grande_bold-webfont.woff" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49990</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
