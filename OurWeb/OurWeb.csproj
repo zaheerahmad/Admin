@@ -82,12 +82,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="About.aspx" />
     <Content Include="Account\ChangePassword.aspx" />
     <Content Include="Account\ChangePasswordSuccess.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
-    <Content Include="Admin\About.aspx" />
     <Content Include="Admin\Admin.aspx" />
     <Content Include="Admin\AdminDB_log.LDF" />
     <Content Include="Admin\AdminSite.csproj" />
@@ -121,7 +119,6 @@
     <Content Include="Admin\Controls\ctlNews.ascx" />
     <Content Include="Admin\Controls\ctlServices.ascx" />
     <Content Include="Admin\Controls\ctlWelcome.ascx" />
-    <Content Include="Admin\Default.aspx" />
     <Content Include="Admin\Global.asax" />
     <Content Include="App_Data\AdminDB.mdf" />
     <Content Include="App_Data\AdminDB_log.ldf">
@@ -321,7 +318,6 @@
     <Content Include="assets\piecemaker2\piecemaker\web\piecemaker.xml" />
     <Content Include="assets\piecemaker2\piecemaker\web\scripts\swfobject\swfobject.js" />
     <Content Include="assets\Styles\Site.css" />
-    <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="assets\Scripts\jquery-1.4.1-vsdoc.js" />
     <Content Include="assets\Scripts\jquery-1.4.1.js" />
@@ -336,13 +332,6 @@
     <Content Include="Home.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="About.aspx.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="About.aspx.designer.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Account\ChangePassword.aspx.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -370,13 +359,6 @@
     </Compile>
     <Compile Include="Account\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\About.aspx.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\About.aspx.designer.cs">
-      <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Admin.aspx.cs">
       <DependentUpon>Admin.aspx</DependentUpon>
@@ -509,33 +491,12 @@
     <Compile Include="Admin\Dao\LoginController.cs" />
     <Compile Include="Admin\Dao\NewsController.cs" />
     <Compile Include="Admin\Dao\ServiceController.cs" />
-    <Compile Include="Admin\Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Admin\Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Admin\Model\Login.cs" />
     <Compile Include="Admin\Model\News.cs" />
     <Compile Include="Admin\Model\Service.cs" />
-    <Compile Include="Admin\Site.Master.cs">
-      <DependentUpon>Site.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Site.Master.designer.cs">
-      <DependentUpon>Site.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -563,7 +524,6 @@
   <ItemGroup>
     <Content Include="Admin\AdminSite.Master" />
     <Content Include="CodeGen\MasterPage.master" />
-    <Content Include="Admin\Site.Master" />
     <None Include="assets\css\helveticaneueltcom-ltcno-webfont.eot" />
     <None Include="assets\css\helveticaneueltcom-ltcno-webfont.ttf" />
     <None Include="assets\css\helveticaneueltpro-mdcn-webfont.eot" />
