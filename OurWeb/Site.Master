@@ -7,24 +7,14 @@
 <title>X-TECH Premium htlm/css template by Shegy </title>
 <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="assets/js/jquery-1.5.1.min.js"></script>
-<link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen"/>
-<link href="assets/bootstrap/css/bootstrap-responsive.css" rel="stylesheet"/>
+<%--<link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen"/>
+<link href="assets/bootstrap/css/bootstrap-responsive.css" rel="stylesheet"/>--%>
 <!--[if IE]>
 <script type="text/javascript" src="js/pie.js"></script>
 <script type="text/javascript" src="js/pie-config.js"></script>
 <![endif]-->
 <script type="text/javascript" src="assets/js/jquery.cycle.all.min.js"></script>
 <script type="text/javascript">
-    /* main page rotator */
-    $('#rotator ul').cycle({
-        fx: 'fade',
-        speed: 300,
-        timeout: 6000,
-        pager: '.controls',
-        prev: '.prev',
-        next: '.next'
-    });
-    // end 
     /* testimonials rotator */
     $('#testimonials ul').cycle({
         fx: 'fade',
@@ -34,6 +24,14 @@
     // end 
 </script>
 <script type="text/javascript" src="assets/js/jquery-workarounds.js"></script>
+
+<link rel="stylesheet" href="assets/nivo-slider/nivo-slider.css" type="text/css" media="screen" />
+<script type="text/javascript" src="assets/nivo-slider/jquery.nivo.slider.pack.js"></script>
+<script type="text/javascript">
+    $(window).load(function () {
+        $('#slider').nivoSlider();
+    });
+</script>
 </head>
 
 <body>
@@ -106,238 +104,15 @@
         <!-- //top -->
         
         <!-- rotator -->
-       	<div id="rotator">
-        
-            <div class="controls"></div>
-            <a href="#" class="btn prev"></a>
-            <a href="#" class="btn next"></a>
-            
-            <ul>
-            	<li>
-				<img src="assets/images/rotator/slide1.jpg" alt="" class="image" />
-                <div class="data">
-                    <h1>
-                        Most powerful <strong>apps</strong> for <strong>iPad, iPhone</strong><br />
-                        and <strong>iPod touch!</strong>
-                    </h1>
-                    <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh<br />
-                euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.<br />
-                Ut wisi enim ad minim veniam, quis nostrud exerci<br />
-                tation ullamcorper suscipit lobortis nisl ut<br />
-                aliquip ex ea commodo consequat.
-                    </p>
-                    <a href="#" class="read-more large">Read more</a>
-                </div>
-                    
-                </li>
-            	<li>
-				<img src="assets/images/rotator/slide2.jpg" alt="" class="image" />
-                <div class="data">
-                    <h1>
-                        Beautiful websites for <br /><strong>your bussiness.</strong><br />
-                    </h1>
-                    <p>
-                Sed diam nonummy nibhLorem ipsum dolor sit amet,  <br />
-                consectetuer adipiscing elit, dolore magna aliquam erat volutpat.<br />
-                Ut wisi enim ad minim veniam,quis nostrud exerciquis nostrud exerci<br />
-                quis nostrud exerciquis nostrud exercitation<br />
-                tation ullamcorper suscipit lobortis.
-                    </p>
-                    <a href="#" class="read-more large">Read more</a>
-                </div>
-                    
-                </li>
-            	<li>
-				<img src="assets/images/rotator/slide3.jpg" alt="" class="image" />
-                <div class="data">
-                    <h1>
-						Strong <strong>brand,</strong> growing <strong>bussines,</strong> creative <strong>people...</strong>
-                    </h1>
-                    <p>
-                Epsum factorial non deposit quid pro Olypian quarrels et gorilla<br />
-				congolium sic ad nauseum. Souvlaki borundum e pluribus unum.<br />
-				Defacto lingo est igpay atinlay. Marquee ovisio incongruous<br />
-				feline nolo contendre. Gratuitous  sodium glutimate.
-                    </p>
-                    <a href="#" class="read-more large">Read more</a>
-                </div>
-                    
-                </li>
-            	<li>
-				<img src="assets/images/rotator/slide4.jpg" alt="" class="image" />
-                <div class="data">
-                    <h1>
-                        <strong>Cross browser</strong> ready template.<br />
-						Different browser, same look. <br />
-                    </h1>
-                    <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
-                euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.<br />
-                Ut wisi enim ad minim veniam, quis nostrud exerci
-                tation ullamcorper suscipit lobortis nisl ut
-                aliquip ex ea commodo consequat.
-                    </p>
-                    <a href="#" class="read-more large">Read more</a>
-                </div>
-                    
-                </li>
-            	<li>
-				<img src="assets/images/rotator/slide5.jpg" alt="" class="image" />
-                <div class="data">
-                    <h1>
-                        Most beautiful <br />
-						<strong>templates</strong>for <strong>your<br />business</strong>
-                        
-                    </h1>
-                    <p>
-                Adipiscing elit, sed diam nonummy nibh<br />
-                euismod tincidunt ut laoreet dolore magna.<br />
-                Ut wisi enim ad minim veniam, quis nostrud exerci<br />
-                tation ullamcorper suscipit lobortis nisl ut<br />
-                aliquip ex ea commodo consequat.
-                    </p>
-                    <a href="#" class="read-more large">Read more</a>
-                </div>
-                    
-                </li>                                                                
-            </ul>
-            
+        <div id="rotator">
+            <asp:ContentPlaceHolder ID="cphRotator" runat="server">
+            </asp:ContentPlaceHolder>
         </div>
         <!-- //rotator -->
-        
         <!-- content -->
         <div id="content">
-        	
-            <!-- set size -->
-            <div class="set-size">
-            
-            <!-- list of articles -->
-            <div class="list-articles">
-            	<ul>
-                	<li>
-                        <img src="assets/images/welcome.jpg" alt="" class="shaded curved image" />
-                        <h4>A new way to web design</h4>
-                        <small>Duis autem vel eum iriure dolor in hendrerit in vulputate</small>
-                        <p>
-                            <strong>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum.</strong> Souvlaki ignitus carborundum e pluribus unum. Defacto lingo est igpay atinlay. Marquee selectus non provisio incongruous feline nolo contendre. Gratuitous octopus niacin, sodium glutimate. Quote meon an estimate et non interruptus stadium. Sic tempus fugit esperanto 
-                        </p>
-                        <br />
-                        <a href="#" class="read-more small float-left">Read more</a><a href="#" class="button small float-left">Get in touch</a>
-                    <div class="clear"></div>
-                    </li>
-                </ul>
-            </div>
-            <!-- //list of articles -->
-            
-            </div>
-            <!-- //set size -->
-            
-            <div class="separator"></div>
-            
-            <!-- set size -->
-            <div class="set-size">
-            
-            <!-- list of services items -->
-            <div class="list-services">
-            	<ul>
-                	<li>
-                    	<div class="image"><img src="assets/images/img2.jpg" alt="" /></div>
-                        <h5><img src="assets/images/ico1.jpg" alt="" />Web design</h5>
-                        <p>
-                        Ma quande lingues coalesce, li grammatica del resultant lingue es plu simplic e regulari quam ti del coalescent lingues. Li nov lingua franca va esser plu simplic e regulari.
-                        </p>
-                        <a href="#" class="read-more small">Read more</a>
-                    </li>
-                	<li>
-                    	<div class="image"><img src="assets/images/img4.jpg" alt="" /></div>
-                        <h5><img src="assets/images/ico2.jpg" alt="" />Stock photos</h5>
-                        <p>
-                        Ma quande lingues coalesce, li grammatica del resultant lingue es plu simplic e regulari quam ti del coalescent lingues. Li nov lingua franca va esser plu simplic e regulari.
-                        </p>
-                        <a href="#" class="read-more small">Read more</a>
-                    </li>
-                	<li>
-                    	<div class="image"><img src="assets/images/img3.jpg" alt="" /></div>
-                        <h5><img src="assets/images/ico3.jpg" alt="" />Support - 24h</h5>
-                        <p>
-                        Ma quande lingues coalesce, li grammatica del resultant lingue es plu simplic e regulari quam ti del coalescent lingues. Li nov lingua franca va esser plu simplic e regulari.
-                        </p>
-                        <a href="#" class="read-more small">Read more</a>
-                    </li>                                                            
-                </ul>
-            <div class="clear"></div>
-            </div>
-            <!-- //list of services items -->
-            
-            </div>
-            <!-- //set size -->
-            
-            <div class="separator"></div>
-            
-            <!-- set size -->
-            <div class="set-size">
-            
-            <!-- testimonials -->
-            <div id="testimonials" class="float-left">
-            	<h5>Testimonials</h5>
-                <small>Lorem ipsum dolor sit ame</small>
-            	<ul>
-                	<li>
-                    	<div class="text curved shaded">
-                        	<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliqup ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate</p>
-                        <div class="clear"></div>
-                        </div>
-                        
-                        <div class="author">Steve Jobs, Apple</div>
-                    </li>
-                	<li>
-                    	<div class="text curved shaded">
-                        	<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliqup ex ea commodo consequat.</p>
-                        <div class="clear"></div>
-                        </div>
-                        
-                        <div class="author">Steve Jobs, Apple</div>
-                    </li>
-                	<li>
-                    	<div class="text curved shaded">
-                        	<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliqup ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate</p>
-                        <div class="clear"></div>
-                        </div>
-                        
-                        <div class="author">Bill Gates, Microsoft</div>
-                    </li>                                        
-                </ul>
-            </div>
-            <!-- //testimonials -->
-            
-            <!-- newsletter -->
-            <div id="newsletter" class="float-right">
-            	<h5>Newsletter</h5>
-                <small>Duis autem vel eum iriure dolor in</small>
-                <p>
-                Souvlaki ignitus carborundum e pluribus unum. Defacto lingo est igpay atinlay. Marquee selectus non provisio incongruous feline nolo contendre. 
-                </p>
-                <form action="#">
-                
-                	<fieldset>
-                    	
-                        <input type="text" value="enter your e-mail here..." class="input-text autoclear" /><input type="submit" value="" class="input-submit" />
-                        
-                    </fieldset>
-                
-                </form>
-                <p>
-                Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit. lobortis 
-                </p>
-            </div>
-            <!-- //newsletter -->
-            
-            </div>
-            <!-- //set size -->
-            
-            <div class="clear"></div>
-            
+            <asp:ContentPlaceHolder ID="cphContent" runat="server">
+            </asp:ContentPlaceHolder>
         </div>
         <!-- //content -->
         
@@ -458,8 +233,6 @@
     
 </div>
 <!-- //lightboxes login panel -->
-    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-    </asp:ContentPlaceHolder>
 
 </body>
 </html>

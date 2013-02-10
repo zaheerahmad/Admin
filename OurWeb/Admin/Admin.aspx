@@ -32,7 +32,7 @@
                 <li>
                     <a href="#">Projects</a>
                 </li>
-                <li><a href="Admin.aspx?ctl=0">Sign Out</a></li>
+                <li><a href="../Home.aspx">Sign Out</a></li>
             </div>
           </div>
         </div>
