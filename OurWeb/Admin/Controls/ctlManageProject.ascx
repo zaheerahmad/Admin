@@ -1,48 +1,45 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ctlManageClient.ascx.cs" Inherits="AdminSite.Controls.ctlManageClient" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ctlManageProject.ascx.cs" Inherits="OurWeb.Admin.Controls.ctlManageProject" %>
 <link href="~/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen"/>
 <link href="~/assets/bootstrap/css/bootstrap-responsive.css" rel="stylesheet"/>
 <div class="span2">
     <ul class="nav nav-list">
-      <li class="nav-header">Clients</li>
-      <li id="home"><a href="Admin.aspx?ctl=8">Home</a></li>
-      <li id="add"><a href="Admin.aspx?ctl=9">Add Clients</a></li>
-      <li id="manage" class="active"><a href="Admin.aspx?ctl=10">Manage Clients</a></li>
+      <li class="nav-header">Project</li>
+      <li id="home"><a href="Admin.aspx?ctl=11">Home</a></li>
+      <li id="add"><a href="Admin.aspx?ctl=12">Add Project</a></li>
+      <li id="manage" class="active"><a href="Admin.aspx?ctl=13">Manage Project</a></li>
     </ul>
 </div>
 <div class="span8">
     <div class="page-header">
-      <h1>Clients<small> Manage Client</small></h1>
+      <h1>Project<small> Manage Project</small></h1>
     </div>
-    <form id="Form1" name="frmManageClients" runat="server">
+    <form id="Form1" name="frmManageService" runat="server">
         <asp:Label ID="lblStatus" runat="server"></asp:Label>
-        <asp:GridView ID="grdClients" runat="server" AutoGenerateColumns="False" 
-        GridLines="None" Width="100%" OnRowCommand="rptClients_ItemCommand" OnPageIndexChanging="grdClients_PageIndexChanging"
+        <asp:GridView ID="grdProject" runat="server" AutoGenerateColumns="False" 
+        GridLines="None" Width="100%" OnRowCommand="rptProject_ItemCommand" OnPageIndexChanging="grdProject_PageIndexChanging"
         AllowPaging="True" CellPadding="4" ForeColor="#333333"  >
         <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
         <Columns>
             <asp:TemplateField Visible="False">
                 <ItemTemplate>
-                    <asp:Label ID="EventID" runat="server" Text='<%# Bind("clientId") %>' Visible="false"></asp:Label>
+                    <asp:Label ID="EventID" runat="server" Text='<%# Bind("projectId") %>' Visible="false"></asp:Label>
                 </ItemTemplate>
             </asp:TemplateField>
-            <asp:TemplateField HeaderText="Clients">
+            <asp:TemplateField HeaderText="Projects">
                 <ItemStyle Width="900px" />
                 <HeaderStyle HorizontalAlign="Left" />
                 <ItemTemplate>
                 <table width="100%">
                     <tr>
                         <td style="width:20%">
-                            <%# Eval("clientName")%>
+                            <%# Eval("projectName")%>
+                        </td>
+                        <td style="width:30%">
+                            <%# Eval("projectURL") %>
                         </td>
                         <td style="width:20%">
-                            <%# Eval("clientContactPerson") %>
-                        </td>
-                        <td style="width:20%">
-                            <%# Eval("clientContactNo") %>
-                        </td>
-                        <td style="width:20%">
-                            <img src='../upload/ClientLogos/<%#Eval("clientLogo")%>' alt="No Image" width="100" height="120"/>
+                            <%# Eval("projectAssignedResource") %>
                         </td>
                     </tr>
                 </table>
@@ -50,13 +47,13 @@
             </asp:TemplateField>
             <asp:TemplateField ShowHeader="false">
                 <ItemTemplate>
-                    <a href='Admin.aspx?ctl=9&amp;id=<%#Eval("clientId")%>'>Edit</a>
+                    <a href='Admin.aspx?ctl=12&amp;id=<%#Eval("projectId")%>'>Edit</a>
                 </ItemTemplate>
             </asp:TemplateField>
                 
             <asp:TemplateField ShowHeader="False">
             <ItemTemplate>
-                <asp:LinkButton ID="LinkButton2" runat="server" CommandArgument='<%#Eval("clientId") %>' CausesValidation="False" CommandName="Del"
+                <asp:LinkButton ID="LinkButton2" runat="server" CommandArgument='<%#Eval("projectId") %>' CausesValidation="False" CommandName="Del"
                 Text="Delete"></asp:LinkButton>
             </ItemTemplate>
                 <ItemStyle HorizontalAlign="Right" />

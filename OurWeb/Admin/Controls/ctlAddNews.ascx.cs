@@ -76,6 +76,14 @@ namespace AdminSite.Controls
             string NewFileName = news.NewsId + "-" + Path.GetFileName(fuNewsPicture.PostedFile.FileName);
             string FileNameWithoutExt = news.NewsId + "-" + Path.GetFileNameWithoutExtension(fuNewsPicture.PostedFile.FileName);
             string error;
+            if (fuNewsPicture.PostedFile.FileName == null || fuNewsPicture.PostedFile.FileName.Equals("") && newsId == 0)
+            {
+                news = new News(News.Columns.NewsId, news.NewsId);
+                news.IsNew = false;
+                news.NewsImage = "NoImage.jpg";
+                news.Save(Guid.NewGuid());
+                return string.Empty;
+            }
             if (fuNewsPicture.PostedFile.ContentLength > 1)
             {
                 Utility.DeleteFile(Global.NewsImages + news.NewsImage);
@@ -88,7 +96,7 @@ namespace AdminSite.Controls
                 }
                 else
                 {
-                    Service.Destroy(news.NewsId);
+                    News.Destroy(news.NewsId);
                     return error.ToString();
                 }
             }

@@ -27,7 +27,10 @@ namespace AdminSite
             ManageNews = 7,
             Client = 8,
             AddClient = 9,
-            ManageClient = 10
+            ManageClient = 10,
+            Project = 11,
+            AddProject = 12,
+            ManageProject = 13
         }
 
         public const string ControlsPath = "~/Admin/Controls/";
@@ -38,6 +41,7 @@ namespace AdminSite
         public const string SuccessLabelStatus = "Request created Successfully!";
         public const string UpdatedLabelStatus = "Request Updated Successfully!";
         public const string NewsImages = "~/upload/NewsImages/";
+        public const string ClientLogos = "~/upload/ClientLogos/";
 
         //public const string stControlsPath = "~/st/Controls/";
         //public const string teControlsPath = "~/te/Controls/";
@@ -100,6 +104,15 @@ namespace AdminSite
                     break;
                 case PageLink.ManageClient:
                     qry = "ctl=10";
+                    break;
+                case PageLink.Project:
+                    qry = "ctl=11";
+                    break;
+                case PageLink.AddProject:
+                    qry = "ctl=12";
+                    break;
+                case PageLink.ManageProject:
+                    qry = "ctl=13";
                     break;
                 default:
                     qry = "ctl=0";

@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AdminSite.Controls {
+namespace OurWeb.Admin.Controls {
     
     
-    public partial class ctlManageClient {
+    public partial class ctlManageProject {
         
         /// <summary>
         /// Form1 control.
@@ -31,12 +31,12 @@ namespace AdminSite.Controls {
         protected global::System.Web.UI.WebControls.Label lblStatus;
         
         /// <summary>
-        /// grdClients control.
+        /// grdProject control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView grdClients;
+        protected global::System.Web.UI.WebControls.GridView grdProject;
     }
 }

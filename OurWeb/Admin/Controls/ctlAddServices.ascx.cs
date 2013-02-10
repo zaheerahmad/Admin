@@ -75,6 +75,14 @@ namespace AdminSite.Controls
             string NewFileName = service.ServiceId + "-" + Path.GetFileName(fuServicePicture.PostedFile.FileName);
             string FileNameWithoutExt = service.ServiceId + "-" + Path.GetFileNameWithoutExtension(fuServicePicture.PostedFile.FileName);
             string error;
+            if (fuServicePicture.PostedFile.FileName == null || fuServicePicture.PostedFile.FileName.Equals("") && serviceId == 0)
+            {
+                service = new Service(Service.Columns.ServiceId, service.ServiceId);
+                service.IsNew = false;
+                service.ServiceImage = "NoImage.jpg";
+                service.Save(Guid.NewGuid());
+                return string.Empty;
+            }
             if (fuServicePicture.PostedFile.ContentLength > 1)
             {
                 Utility.DeleteFile(Global.ServicesImages + service.ServiceImage);

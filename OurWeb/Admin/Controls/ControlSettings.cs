@@ -20,9 +20,9 @@ namespace AdminSite.Controls
             Client = 8,
             AddClient = 9,
             ManageClient = 10,
-            AddTeacher = 11,
-            ManageTeacher = 12,
-            TimeTable = 13,
+            Project = 11,
+            AddProject = 12,
+            ManageProject = 13,
             ManageRequests = 14,
             UploadAdmissionForm = 15
         }
@@ -63,15 +63,15 @@ namespace AdminSite.Controls
                 case ControlName.ManageClient:
                     controlName = "ctlManageClient";
                     break;
-                //case ControlName.AddTeacher:
-                //    controlName = "ctlAddTeacher";
-                //    break;
-                //case ControlName.ManageTeacher:
-                //    controlName = "ctlManageTeacher";
-                //    break;
-                //case ControlName.TimeTable:
-                //    controlName = "ctlTimeTable";
-                //    break;
+                case ControlName.Project:
+                    controlName = "ctlProject";
+                    break;
+                case ControlName.AddProject:
+                    controlName = "ctlAddProject";
+                    break;
+                case ControlName.ManageProject:
+                    controlName = "ctlManageProject";
+                    break;
                 //case ControlName.ManageRequests:
                 //    controlName = "ctlManageRequests";
                 //    break;

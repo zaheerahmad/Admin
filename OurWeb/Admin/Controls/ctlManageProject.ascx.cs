@@ -6,20 +6,22 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using OurWeb.Model;
 
-namespace AdminSite.Controls
+namespace OurWeb.Admin.Controls
 {
-    public partial class ctlManageClient : System.Web.UI.UserControl
+    public partial class ctlManageProject : System.Web.UI.UserControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
-                BindClients();
+                BindProject();
         }
 
         public int NewsPageIndex
         {
             get
-            { object o = this.ViewState["_PageIndex"];
+            {
+
+                object o = this.ViewState["_PageIndex"];
                 if (o == null)
                     return 0;
                 else
@@ -32,41 +34,41 @@ namespace AdminSite.Controls
             }
         }
 
-        void BindClients()
+        void BindProject()
         {
-            ClientCollection clientCollection = new ClientCollection();
+            ProjectCollection projectCollection = new ProjectCollection();
             //coll.Where(DocCat.Columns.Active, 1);
-            clientCollection.Load();
-            grdClients.DataSource = clientCollection;
-            grdClients.DataBind();
+            projectCollection.Load();
+            grdProject.DataSource = projectCollection;
+            grdProject.DataBind();
             //pnlMain.UpdateAfterCallBack = true;
 
         }
 
-        protected void grdClients_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        protected void grdProject_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
-            grdClients.PageIndex = e.NewPageIndex;
-            BindClients();
+            grdProject.PageIndex = e.NewPageIndex;
+            BindProject();
         }
 
         protected void btnShowAddCancel_Click(object sender, EventArgs e)
         {
-            Response.Redirect(Global.GetPageLink(Global.PageLink.AddClient));
+            Response.Redirect(AdminSite.Global.GetPageLink(AdminSite.Global.PageLink.AddNews));
         }
 
         void DeleteNews(int Id)
         {
-            Client.Destroy(Id);
+            Project.Destroy(Id);
         }
 
-        protected void rptClients_ItemCommand(object source, GridViewCommandEventArgs e)
+        protected void rptProject_ItemCommand(object source, GridViewCommandEventArgs e)
         {
             string command = e.CommandName;
             if (command == "Del")
             {
                 DeleteNews(int.Parse(e.CommandArgument.ToString()));
-                grdClients.EditIndex = -1;
-                BindClients();
+                grdProject.EditIndex = -1;
+                BindProject();
             }
         }
     }

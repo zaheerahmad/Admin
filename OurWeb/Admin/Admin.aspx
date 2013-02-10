@@ -24,13 +24,10 @@
                     <a href="Admin.aspx?ctl=6">News</a>
                 </li>
                 <li>
-                    <a href="#">Events</a>
-                </li>
-                <li>
                     <a href="Admin.aspx?ctl=8">Clients</a>
                 </li>
                 <li>
-                    <a href="#">Projects</a>
+                    <a href="Admin.aspx?ctl=11">Projects</a>
                 </li>
                 <li><a href="../Home.aspx">Sign Out</a></li>
             </div>

@@ -6,7 +6,7 @@
       <li class="nav-header">Clients</li>
       <li id="home" class="active"><a href="Admin.aspx?ctl=8">Home</a></li>
       <li id="add"><a href="Admin.aspx?ctl=9">Add Clients</a></li>
-      <li id="manage"><a href="#">Manage Clients</a></li>
+      <li id="manage"><a href="Admin.aspx?ctl=10">Manage Clients</a></li>
     </ul>
 </div>
 <div class="span8">

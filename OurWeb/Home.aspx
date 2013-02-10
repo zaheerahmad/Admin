@@ -35,34 +35,26 @@
             
             <!-- testimonials -->
             <div id="testimonials" class="float-left">
-            	<h5>Testimonials</h5>
-                <small>Lorem ipsum dolor sit ame</small>
-            	<ul>
-                	<li>
+            	<h5>News</h5>
+                <ul>
+                <% AdminSite.Dao.NewsController newsController = new AdminSite.Dao.NewsController();
+                   foreach (AdminSite.Model.News news in newsController.FetchAll())
+                   {
+                   %>
+                   
+                   <li>
                     	<div class="text curved shaded">
-                        	<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliqup ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate</p>
+                        	<strong><%=news.NewsTitle %></strong><br /><p><%=news.NewsDescription %></p>
                         <div class="clear"></div>
                         </div>
                         
-                        <div class="author">Steve Jobs, Apple</div>
+                        <%--<div class="author">Steve Jobs, Apple</div>--%>
                     </li>
-                	<li>
-                    	<div class="text curved shaded">
-                        	<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliqup ex ea commodo consequat.</p>
-                        <div class="clear"></div>
-                        </div>
-                        
-                        <div class="author">Steve Jobs, Apple</div>
-                    </li>
-                	<li>
-                    	<div class="text curved shaded">
-                        	<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliqup ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate</p>
-                        <div class="clear"></div>
-                        </div>
-                        
-                        <div class="author">Bill Gates, Microsoft</div>
-                    </li>                                        
-                </ul>
+
+                   <%
+                   }
+                     %>
+                     </ul>
             </div>
             <!-- //testimonials -->
             

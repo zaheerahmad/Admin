@@ -39,7 +39,8 @@
                             <%# Eval("serviceDescription") %>
                         </td>
                         <td style="width:30%">
-                            <img src='../upload/ServicesImages/<%#Eval("serviceImage")%>' alt="Service Image" width="100" height="120"/>
+                            
+                            <img src='../upload/ServicesImages/<%#Eval("serviceImage")%>' alt="No Image" width="100" height="120"/>
                         </td>
                     </tr>
                 </table>
