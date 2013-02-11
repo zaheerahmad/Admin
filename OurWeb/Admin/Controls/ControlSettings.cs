@@ -23,8 +23,9 @@ namespace AdminSite.Controls
             Project = 11,
             AddProject = 12,
             ManageProject = 13,
-            ManageRequests = 14,
-            UploadAdmissionForm = 15
+            Portfolio = 14,
+            AddPortfolio = 15,
+            ManagePortfolio = 16
         }
 
         public static string GetControlFileName(ControlName controlId, string folderPath)
@@ -72,12 +73,15 @@ namespace AdminSite.Controls
                 case ControlName.ManageProject:
                     controlName = "ctlManageProject";
                     break;
-                //case ControlName.ManageRequests:
-                //    controlName = "ctlManageRequests";
-                //    break;
-                //case ControlName.UploadAdmissionForm:
-                //    controlName = "ctlUploadAdmissionForm";
-                //    break;
+                case ControlName.Portfolio:
+                    controlName = "ctlPortfolio";
+                    break;
+                case ControlName.AddPortfolio:
+                    controlName = "ctlAddPortfolio";
+                    break;
+                case ControlName.ManagePortfolio:
+                    controlName = "ctlManagePortfolio";
+                    break;
                 default:
                     controlName = "ctlLogin";
                     break;

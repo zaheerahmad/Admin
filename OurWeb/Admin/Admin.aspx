@@ -29,6 +29,9 @@
                 <li>
                     <a href="Admin.aspx?ctl=11">Projects</a>
                 </li>
+                <li>
+                    <a href="Admin.aspx?ctl=14">Portfolio</a>
+                </li>
                 <li><a href="../Home.aspx">Sign Out</a></li>
             </div>
           </div>

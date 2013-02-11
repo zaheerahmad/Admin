@@ -30,7 +30,10 @@ namespace AdminSite
             ManageClient = 10,
             Project = 11,
             AddProject = 12,
-            ManageProject = 13
+            ManageProject = 13,
+            Portfolio = 14,
+            AddPortfolio = 15,
+            ManagePortfolio = 16
         }
 
         public const string ControlsPath = "~/Admin/Controls/";
@@ -113,6 +116,15 @@ namespace AdminSite
                     break;
                 case PageLink.ManageProject:
                     qry = "ctl=13";
+                    break;
+                case PageLink.Portfolio:
+                    qry = "ctl=14";
+                    break;
+                case PageLink.AddPortfolio:
+                    qry = "ctl=15";
+                    break;
+                case PageLink.ManagePortfolio:
+                    qry = "ctl=16";
                     break;
                 default:
                     qry = "ctl=0";

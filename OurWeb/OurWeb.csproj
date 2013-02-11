@@ -103,8 +103,11 @@
     <Content Include="Admin\assets\Scripts\jquery-1.4.1.js" />
     <Content Include="Admin\assets\Scripts\jquery-1.4.1.min.js" />
     <Content Include="Admin\assets\Styles\Site.css" />
+    <Content Include="Admin\Controls\ctlAddPortfolio.ascx" />
     <Content Include="Admin\Controls\ctlAddProject.ascx" />
+    <Content Include="Admin\Controls\ctlManagePorfolio.ascx" />
     <Content Include="Admin\Controls\ctlManageProject.ascx" />
+    <Content Include="Admin\Controls\ctlPortfolio.ascx" />
     <Content Include="Admin\Controls\ctlProject.ascx" />
     <Content Include="CodeGen\ClassGenerator.ascx" />
     <Content Include="CodeGen\ConfigBuilder.ascx" />
@@ -377,12 +380,26 @@
     <Compile Include="Admin\AdminSite.Master.designer.cs">
       <DependentUpon>AdminSite.Master</DependentUpon>
     </Compile>
+    <Compile Include="Admin\Controls\ctlAddPortfolio.ascx.cs">
+      <DependentUpon>ctlAddPortfolio.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Controls\ctlAddPortfolio.ascx.designer.cs">
+      <DependentUpon>ctlAddPortfolio.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Controls\ctlAddProject.ascx.cs">
       <DependentUpon>ctlAddProject.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\Controls\ctlAddProject.ascx.designer.cs">
       <DependentUpon>ctlAddProject.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Controls\ctlManagePorfolio.ascx.cs">
+      <DependentUpon>ctlManagePorfolio.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Controls\ctlManagePorfolio.ascx.designer.cs">
+      <DependentUpon>ctlManagePorfolio.ascx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Controls\ctlManageProject.ascx.cs">
       <DependentUpon>ctlManageProject.ascx</DependentUpon>
@@ -391,6 +408,13 @@
     <Compile Include="Admin\Controls\ctlManageProject.ascx.designer.cs">
       <DependentUpon>ctlManageProject.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\Controls\ctlPortfolio.ascx.cs">
+      <DependentUpon>ctlPortfolio.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Controls\ctlPortfolio.ascx.designer.cs">
+      <DependentUpon>ctlPortfolio.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Controls\ctlProject.ascx.cs">
       <DependentUpon>ctlProject.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -398,10 +422,13 @@
     <Compile Include="Admin\Controls\ctlProject.ascx.designer.cs">
       <DependentUpon>ctlProject.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\Controls\ScrollBar.cs" />
     <Compile Include="Admin\Dao\ClientController.cs" />
     <Compile Include="Admin\Dao\ProjectController.cs" />
+    <Compile Include="Admin\Dao\ToolsAndTechniqueController.cs" />
     <Compile Include="Admin\Model\Client.cs" />
     <Compile Include="Admin\Model\Project.cs" />
+    <Compile Include="Admin\Model\ToolsAndTechnique.cs" />
     <Compile Include="CodeGen\ClassGenerator.ascx.cs">
       <DependentUpon>ClassGenerator.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

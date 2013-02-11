@@ -16,3 +16,8 @@ E:\Work\Admin\trunk\OurWeb\bin\OurWeb.pdb
 E:\Work\Admin\trunk\OurWeb\obj\Debug\ResolveAssemblyReference.cache
 E:\Work\Admin\trunk\OurWeb\obj\Debug\OurWeb.dll
 E:\Work\Admin\trunk\OurWeb\obj\Debug\OurWeb.pdb
+D:\Admin\trunk\OurWeb\bin\OurWeb.dll
+D:\Admin\trunk\OurWeb\bin\OurWeb.pdb
+D:\Admin\trunk\OurWeb\obj\Debug\ResolveAssemblyReference.cache
+D:\Admin\trunk\OurWeb\obj\Debug\OurWeb.dll
+D:\Admin\trunk\OurWeb\obj\Debug\OurWeb.pdb
