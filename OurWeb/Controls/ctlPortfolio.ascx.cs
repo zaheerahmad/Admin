@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using OurWeb.Dao;
 
 namespace OurWeb.Controls
 {
@@ -12,6 +13,12 @@ namespace OurWeb.Controls
         protected void Page_Load(object sender, EventArgs e)
         {
 
+        }
+
+        public void BindAllPortfolio()
+        {
+            PortfolioController portfolioController = new PortfolioController();
+            
         }
     }
 }

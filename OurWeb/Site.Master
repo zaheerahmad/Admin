@@ -73,7 +73,7 @@
                         </ul>
 					</li>
                     <li><a href="#"><span>Works</span></a></li>
-                    <li><a href="Home.aspx?ctl?1"><span>Portfolio</span></a>
+                    <li><a href="Home.aspx?ctl=1"><span>Portfolio</span></a>
                     	<ul class="sub curved">
                         	<li><a href="blog-post.html">Blog post</a></li>
                         </ul>
