@@ -112,13 +112,13 @@ namespace OurWeb.Admin.Controls {
         protected global::System.Web.UI.WebControls.TextBox txtProjectURL;
         
         /// <summary>
-        /// TextBox1 control.
+        /// fuPortfolioImage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.FileUpload fuPortfolioImage;
         
         /// <summary>
         /// btnAddProject control.

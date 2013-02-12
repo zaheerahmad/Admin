@@ -8,12 +8,12 @@ using OurWeb.Model;
 
 namespace OurWeb.Admin.Controls
 {
-    public partial class ctlManageProject : System.Web.UI.UserControl
+    public partial class ctlManagePortfolio : System.Web.UI.UserControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
-                BindProject();
+                BindPortfolio();
         }
 
         public int NewsPageIndex
@@ -34,12 +34,12 @@ namespace OurWeb.Admin.Controls
             }
         }
 
-        void BindProject()
+        void BindPortfolio()
         {
-            ProjectCollection projectCollection = new ProjectCollection();
+            PortfolioCollection portfolioCollection = new PortfolioCollection();
             //coll.Where(DocCat.Columns.Active, 1);
-            projectCollection.Load();
-            grdProject.DataSource = projectCollection;
+            portfolioCollection.Load();
+            grdProject.DataSource = portfolioCollection;
             grdProject.DataBind();
             //pnlMain.UpdateAfterCallBack = true;
 
@@ -48,17 +48,17 @@ namespace OurWeb.Admin.Controls
         protected void grdProject_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
             grdProject.PageIndex = e.NewPageIndex;
-            BindProject();
+            BindPortfolio();
         }
 
         protected void btnShowAddCancel_Click(object sender, EventArgs e)
         {
-            Response.Redirect(AdminSite.Global.GetPageLink(AdminSite.Global.PageLink.AddNews));
+            Response.Redirect(AdminSite.Global.GetPageLink(AdminSite.Global.PageLink.Portfolio));
         }
 
-        void DeleteProject(int Id)
+        void DeletePortfolio(int Id)
         {
-            Project.Destroy(Id);
+            Portfolio.Destroy(Id);
         }
 
         protected void rptProject_ItemCommand(object source, GridViewCommandEventArgs e)
@@ -66,9 +66,9 @@ namespace OurWeb.Admin.Controls
             string command = e.CommandName;
             if (command == "Del")
             {
-                DeleteProject(int.Parse(e.CommandArgument.ToString()));
+                DeletePortfolio(int.Parse(e.CommandArgument.ToString()));
                 grdProject.EditIndex = -1;
-                BindProject();
+                BindPortfolio();
             }
         }
     }

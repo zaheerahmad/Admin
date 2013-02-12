@@ -58,7 +58,7 @@
             </div>
             <div id="top-menu" class="float-right">
                 <ul class="main">
-                    <li><a href="index-2.html" class="current"><span>Home</span></a>
+                    <li><a href="Home.aspx?ctl=0" class="current"><span>Home</span></a>
                     	<ul class="sub curved">
                         	<li><a href="index-2.html">Fade slider</a></li>
                         	<li><a href="index-3d.html">3D slider</a></li>    
@@ -72,8 +72,8 @@
                             <li><a href="contact.html">Contact</a></li>                        
                         </ul>
 					</li>
-                    <li><a href="works.html"><span>Works</span></a></li>
-                    <li><a href="blog.html"><span>Blog</span></a>
+                    <li><a href="#"><span>Works</span></a></li>
+                    <li><a href="Home.aspx?ctl?1"><span>Portfolio</span></a>
                     	<ul class="sub curved">
                         	<li><a href="blog-post.html">Blog post</a></li>
                         </ul>
@@ -102,20 +102,8 @@
             
         </div>
         <!-- //top -->
-        
-        <!-- rotator -->
-        <div id="rotator">
-            <asp:ContentPlaceHolder ID="cphRotator" runat="server">
-            </asp:ContentPlaceHolder>
-        </div>
-        <!-- //rotator -->
-        <!-- content -->
-        <div id="content">
-            <asp:ContentPlaceHolder ID="cphContent" runat="server">
-            </asp:ContentPlaceHolder>
-        </div>
-        <!-- //content -->
-        
+        <asp:ContentPlaceHolder ID="cphContent" runat="server">
+        </asp:ContentPlaceHolder>
     </div>
     <!-- //page -->
     

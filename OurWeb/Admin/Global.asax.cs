@@ -45,6 +45,7 @@ namespace AdminSite
         public const string UpdatedLabelStatus = "Request Updated Successfully!";
         public const string NewsImages = "~/upload/NewsImages/";
         public const string ClientLogos = "~/upload/ClientLogos/";
+        public const string PortFolio = "~/upload/PortFolios/";
 
         //public const string stControlsPath = "~/st/Controls/";
         //public const string teControlsPath = "~/te/Controls/";
