@@ -13,7 +13,7 @@ namespace OurWeb.Controls
             Portfolio = 1,
             Services = 2,
             Contact = 3,
-            //AddNews = 4,
+            Clients = 4,
             //Services = 5,
             //News = 6,
             //ManageNews = 7,
@@ -46,9 +46,9 @@ namespace OurWeb.Controls
                 case ControlName.Contact:
                     controlName = "ctlContact";
                     break;
-                //case ControlName.Login:
-                //    controlName = "ctlLogin";
-                //    break;
+                case ControlName.Clients:
+                    controlName = "ctlClients";
+                    break;
                 //case ControlName.News:
                 //    controlName = "ctlNews";
                 //    break;

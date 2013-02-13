@@ -115,7 +115,7 @@ namespace OurWeb.Model
 				TableSchema.TableColumn colvarClientName = new TableSchema.TableColumn(schema);
 				colvarClientName.ColumnName = "clientName";
 				colvarClientName.DataType = DbType.String;
-				colvarClientName.MaxLength = 50;
+				colvarClientName.MaxLength = 150;
 				colvarClientName.AutoIncrement = false;
 				colvarClientName.IsNullable = false;
 				colvarClientName.IsPrimaryKey = false;
@@ -154,7 +154,7 @@ namespace OurWeb.Model
 				TableSchema.TableColumn colvarClientContactPerson = new TableSchema.TableColumn(schema);
 				colvarClientContactPerson.ColumnName = "clientContactPerson";
 				colvarClientContactPerson.DataType = DbType.String;
-				colvarClientContactPerson.MaxLength = 50;
+				colvarClientContactPerson.MaxLength = 150;
 				colvarClientContactPerson.AutoIncrement = false;
 				colvarClientContactPerson.IsNullable = false;
 				colvarClientContactPerson.IsPrimaryKey = false;
@@ -167,7 +167,7 @@ namespace OurWeb.Model
 				TableSchema.TableColumn colvarClientContactNo = new TableSchema.TableColumn(schema);
 				colvarClientContactNo.ColumnName = "clientContactNo";
 				colvarClientContactNo.DataType = DbType.String;
-				colvarClientContactNo.MaxLength = 150;
+				colvarClientContactNo.MaxLength = 50;
 				colvarClientContactNo.AutoIncrement = false;
 				colvarClientContactNo.IsNullable = false;
 				colvarClientContactNo.IsPrimaryKey = false;
@@ -177,10 +177,23 @@ namespace OurWeb.Model
 				colvarClientContactNo.ForeignKeyTableName = "";
 				schema.Columns.Add(colvarClientContactNo);
 				
+				TableSchema.TableColumn colvarClientURL = new TableSchema.TableColumn(schema);
+				colvarClientURL.ColumnName = "clientURL";
+				colvarClientURL.DataType = DbType.String;
+				colvarClientURL.MaxLength = 50;
+				colvarClientURL.AutoIncrement = false;
+				colvarClientURL.IsNullable = true;
+				colvarClientURL.IsPrimaryKey = false;
+				colvarClientURL.IsForeignKey = false;
+				colvarClientURL.IsReadOnly = false;
+				colvarClientURL.DefaultSetting = @"";
+				colvarClientURL.ForeignKeyTableName = "";
+				schema.Columns.Add(colvarClientURL);
+				
 				TableSchema.TableColumn colvarClientLogo = new TableSchema.TableColumn(schema);
 				colvarClientLogo.ColumnName = "clientLogo";
 				colvarClientLogo.DataType = DbType.String;
-				colvarClientLogo.MaxLength = 250;
+				colvarClientLogo.MaxLength = 150;
 				colvarClientLogo.AutoIncrement = false;
 				colvarClientLogo.IsNullable = true;
 				colvarClientLogo.IsPrimaryKey = false;
@@ -268,6 +281,17 @@ namespace OurWeb.Model
 		}
 
 		  
+		[XmlAttribute("ClientURL")]
+		[Bindable(true)]
+		public string ClientURL 
+		{
+			get { return GetColumnValue<string>(Columns.ClientURL); }
+
+			set { SetColumnValue(Columns.ClientURL, value); }
+
+		}
+
+		  
 		[XmlAttribute("ClientLogo")]
 		[Bindable(true)]
 		public string ClientLogo 
@@ -298,7 +322,7 @@ namespace OurWeb.Model
 		/// <summary>
 		/// Inserts a record, can be used with the Object Data Source
 		/// </summary>
-		public static void Insert(string varClientName,string varClientDescription,string varClientAddress,string varClientContactPerson,string varClientContactNo,string varClientLogo)
+		public static void Insert(string varClientName,string varClientDescription,string varClientAddress,string varClientContactPerson,string varClientContactNo,string varClientURL,string varClientLogo)
 		{
 			Client item = new Client();
 			
@@ -311,6 +335,8 @@ namespace OurWeb.Model
 			item.ClientContactPerson = varClientContactPerson;
 			
 			item.ClientContactNo = varClientContactNo;
+			
+			item.ClientURL = varClientURL;
 			
 			item.ClientLogo = varClientLogo;
 			
@@ -325,7 +351,7 @@ namespace OurWeb.Model
 		/// <summary>
 		/// Updates a record, can be used with the Object Data Source
 		/// </summary>
-		public static void Update(int varClientId,string varClientName,string varClientDescription,string varClientAddress,string varClientContactPerson,string varClientContactNo,string varClientLogo)
+		public static void Update(int varClientId,string varClientName,string varClientDescription,string varClientAddress,string varClientContactPerson,string varClientContactNo,string varClientURL,string varClientLogo)
 		{
 			Client item = new Client();
 			
@@ -340,6 +366,8 @@ namespace OurWeb.Model
 				item.ClientContactPerson = varClientContactPerson;
 			
 				item.ClientContactNo = varClientContactNo;
+			
+				item.ClientURL = varClientURL;
 			
 				item.ClientLogo = varClientLogo;
 			
@@ -411,9 +439,18 @@ namespace OurWeb.Model
         
         
         
-        public static TableSchema.TableColumn ClientLogoColumn
+        public static TableSchema.TableColumn ClientURLColumn
         {
             get { return Schema.Columns[6]; }
+
+        }
+
+        
+        
+        
+        public static TableSchema.TableColumn ClientLogoColumn
+        {
+            get { return Schema.Columns[7]; }
 
         }
 
@@ -430,6 +467,7 @@ namespace OurWeb.Model
 			 public static string ClientAddress = @"clientAddress";
 			 public static string ClientContactPerson = @"clientContactPerson";
 			 public static string ClientContactNo = @"clientContactNo";
+			 public static string ClientURL = @"clientURL";
 			 public static string ClientLogo = @"clientLogo";
 						
 		}

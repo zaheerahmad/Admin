@@ -2,7 +2,7 @@
 <!-- header -->
         <div id="header">
         	
-            <a href="#" class="button small float-right">Get in touch</a>
+            <a href="Home.aspx?ctl=3" class="button small float-right">Get in touch</a>
             <a href="Home.aspx?ctl=1" class="button blue float-right">Check our works</a>
             
             <h2>Services</h2> <p>Duis autem vel eum iriure dolor in hendrerit in vulputate</p>
@@ -13,7 +13,7 @@
         <!-- path -->
         <div id="path">
         	
-            <strong>You are here:</strong> <a href="#">Home</a> / <a href="#">Services</a>
+            <strong>You are here:</strong> <a href="Home.aspx?ctl=0">Home</a> / <a href="Home.aspx?ctl=2">Services</a>
             
         </div>
         <!-- //path -->

@@ -91,7 +91,7 @@ namespace OurWeb.Dao
 	    /// Inserts a record, can be used with the Object Data Source
 	    /// </summary>
         [DataObjectMethod(DataObjectMethodType.Insert, true)]
-	    public void Insert(string ClientName,string ClientDescription,string ClientAddress,string ClientContactPerson,string ClientContactNo,string ClientLogo)
+	    public void Insert(string ClientName,string ClientDescription,string ClientAddress,string ClientContactPerson,string ClientContactNo,string ClientURL,string ClientLogo)
 	    {
 		    Client item = new Client();
 		    
@@ -105,6 +105,8 @@ namespace OurWeb.Dao
             
             item.ClientContactNo = ClientContactNo;
             
+            item.ClientURL = ClientURL;
+            
             item.ClientLogo = ClientLogo;
             
 	    
@@ -116,7 +118,7 @@ namespace OurWeb.Dao
 	    /// Updates a record, can be used with the Object Data Source
 	    /// </summary>
         [DataObjectMethod(DataObjectMethodType.Update, true)]
-	    public void Update(int ClientId,string ClientName,string ClientDescription,string ClientAddress,string ClientContactPerson,string ClientContactNo,string ClientLogo)
+	    public void Update(int ClientId,string ClientName,string ClientDescription,string ClientAddress,string ClientContactPerson,string ClientContactNo,string ClientURL,string ClientLogo)
 	    {
 		    Client item = new Client();
 	        item.MarkOld();
@@ -133,6 +135,8 @@ namespace OurWeb.Dao
 			item.ClientContactPerson = ClientContactPerson;
 				
 			item.ClientContactNo = ClientContactNo;
+				
+			item.ClientURL = ClientURL;
 				
 			item.ClientLogo = ClientLogo;
 				

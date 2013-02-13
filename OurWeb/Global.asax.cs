@@ -20,7 +20,7 @@ namespace OurWeb
             Portfolio = 1,
             Services = 2,
             Contact = 3,
-            //Login = 4,
+            Clients = 4,
             //Services = 5,
             //News = 6,
             //ManageNews = 7,
@@ -56,9 +56,9 @@ namespace OurWeb
                 case PageLink.Contact:
                     qry = "ctl=3";
                     break;
-                //case PageLink.Login:
-                //    qry = "ctl=4";
-                //    break;
+                case PageLink.Clients:
+                    qry = "ctl=4";
+                    break;
                 //case PageLink.Services:
                 //    qry = "ctl=5";
                 //    break;

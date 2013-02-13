@@ -47,7 +47,7 @@
         	
             <a href="#" id="login-box">Login</a>
             
-            <a href="index-2.html" id="logo" class="float-left"><img src="assets/images/logo.png" alt="" /></a>
+            <a href="Home.aspx?ctl=0" id="logo" class="float-left"><img src="assets/images/logo.png" alt="" /></a>
             
             <div id="search" class="float-right">
             	<form action="#" id="form-search">
@@ -66,6 +66,7 @@
                         </ul>
                     </li>
                     <li><a href="Home.aspx?ctl=1"><span>Portfolio</span></a></li>
+                    <li><a href="Home.aspx?ctl=4"><span>Our Clients</span></a></li>
                     <%--<li><a href="Home.aspx?ctl=1"><span>Portfolio</span></a>
                     	<ul class="sub curved">
                         	<li><a href="blog-post.html">Blog post</a></li>

@@ -39,7 +39,7 @@ namespace AdminSite.Controls
                     client.ClientAddress = txtAddress.Text;
                     client.ClientContactPerson = txtContactPerson.Text;
                     client.ClientContactNo = txtContactNo.Text;
-                    
+                    client.ClientURL = txtClientURL.Text;
                     try
                     {
                         client.Save();
@@ -113,6 +113,7 @@ namespace AdminSite.Controls
             txtAddress.Text = "";
             txtContactPerson.Text = "";
             txtContactNo.Text = "";
+            txtClientURL.Text = "";
             fuLogo.Dispose();
         }
 
@@ -124,6 +125,7 @@ namespace AdminSite.Controls
             txtAddress.Text = client.ClientAddress;
             txtContactPerson.Text = client.ClientContactPerson;
             txtContactNo.Text = client.ClientContactNo;
+            txtClientURL.Text = client.ClientURL;
         }
 
         public void Save()
@@ -135,6 +137,7 @@ namespace AdminSite.Controls
             client.ClientAddress = txtAddress.Text;
             client.ClientContactPerson = txtContactPerson.Text;
             client.ClientContactNo = txtContactNo.Text;
+            client.ClientURL = txtClientURL.Text;
             client.Save();
 
             //Now Save Picture As Well..

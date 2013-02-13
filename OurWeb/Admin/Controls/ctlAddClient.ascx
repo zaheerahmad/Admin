@@ -55,6 +55,13 @@
         </div>
       </div>
       <div class="control-group">
+        <label class="control-label" for="txtClientURL">Client Profile URL</label>
+        <div class="controls">
+          <asp:TextBox ID="txtClientURL" runat="server" placeHolder="Type Client URL here..."></asp:TextBox>
+          <asp:RequiredFieldValidator ID="RequiredFieldValidator4" ControlToValidate="txtClientURL" runat="server" ForeColor="Red" Text="*" />
+        </div>
+      </div>
+      <div class="control-group">
         <label class="control-label" for="fuLogo">Add Logo</label>
         <div class="controls">
             <asp:FileUpload ID="fuLogo" runat="server"/>

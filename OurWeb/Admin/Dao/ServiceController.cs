@@ -16,7 +16,7 @@ using AdminSite.Model;
 namespace AdminSite.Dao
 {
     /// <summary>
-    /// Controller class for tblServices
+    /// Controller class for tblService
     /// </summary>
     [System.ComponentModel.DataObject]
     public partial class ServiceController

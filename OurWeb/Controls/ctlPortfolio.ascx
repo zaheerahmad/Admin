@@ -33,10 +33,10 @@
                 <ul>
                 	<li><strong>Filter in categories:</strong></li>
                     <li><a class="button-normal current" href="#all" rel="all">All</a></li>
-					<li><a class="button-normal" href="#webdesign" rel="webdesign">Web design</a></li>
+					<%--<li><a class="button-normal" href="#webdesign" rel="webdesign">Web design</a></li>
                     <li><a class="button-normal" href="#prints" rel="prints">Print design</a></li>
                     <li><a class="button-normal" href="#branding" rel="branding">Branding</a></li>
-                    <li><a class="button-normal" href="#other" rel="other">Other</a></li>
+                    <li><a class="button-normal" href="#other" rel="other">Other</a></li>--%>
                 </ul>
             <div class="clear"></div>                
             </div>
@@ -48,7 +48,7 @@
         <!-- path -->
         <div id="path">
         	
-            <strong>You are here:</strong> <a href="#">Home</a> / <a href="#">Works</a>
+            <strong>You are here:</strong> <a href="Home.aspx?ctl=0">Home</a> / <a href="Home.aspx?ctl=1">Works</a>
             
         </div>
         <!-- //path -->
@@ -69,8 +69,8 @@
                             <div class="image"><a href="#" class="more normal"></a><img src="../upload/PortFolios/<%=portfolio.PortfolioImage %>" alt="" class="curved shaded" width="220" height="125"/></div>
                             <div class="data">
                             <h5><%=portfolio.ProjectName%></h5>
-                            <small><a href="<%=portfolio.ProjectURL%>" target="_blank"><%=portfolio.ProjectURL%></a></small>
-                            <p><%=portfolio.ProjectDescription.Substring(0,20)%></p>
+                            <%--<small><a href="<%=portfolio.ProjectURL%>" target="_blank"><%=portfolio.ProjectURL%></a></small>
+                            <p><%=portfolio.ProjectDescription.Substring(0,20)%></p>--%>
                             
                             </div>
                             

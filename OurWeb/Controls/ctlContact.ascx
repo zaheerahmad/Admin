@@ -23,7 +23,7 @@
         <!-- path -->
         <div id="path">
         	
-            <strong>You are here:</strong> <a href="#">Home</a> / <a href="#">Contact</a>
+            <strong>You are here:</strong> <a href="Home.aspx?ctl=0">Home</a> / <a href="Home.aspx?ctl=3">Contact</a>
             
         </div>
         <!-- //path -->

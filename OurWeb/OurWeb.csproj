@@ -82,10 +82,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="about-us.html" />
     <Content Include="Account\ChangePassword.aspx" />
     <Content Include="Account\ChangePasswordSuccess.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
+    <Content Include="addons.html" />
     <Content Include="Admin\Admin.aspx" />
     <Content Include="Admin\AdminDB_log.LDF" />
     <Content Include="Admin\AdminSite.csproj" />
@@ -109,6 +111,8 @@
     <Content Include="Admin\Controls\ctlManageProject.ascx" />
     <Content Include="Admin\Controls\ctlPortfolio.ascx" />
     <Content Include="Admin\Controls\ctlProject.ascx" />
+    <Content Include="blog-post.html" />
+    <Content Include="blog.html" />
     <Content Include="CodeGen\ClassGenerator.ascx" />
     <Content Include="CodeGen\ConfigBuilder.ascx" />
     <Content Include="CodeGen\Configuration.aspx" />
@@ -324,6 +328,9 @@
     <Content Include="assets\piecemaker2\piecemaker\web\piecemaker.xml" />
     <Content Include="assets\piecemaker2\piecemaker\web\scripts\swfobject\swfobject.js" />
     <Content Include="assets\Styles\Site.css" />
+    <Content Include="columns.html" />
+    <Content Include="Controls\ctlAboutUs.ascx" />
+    <Content Include="Controls\ctlClients.ascx" />
     <Content Include="Controls\ctlContact.ascx" />
     <Content Include="Controls\ctlHome.ascx" />
     <Content Include="Controls\ctlPortfolio.ascx" />
@@ -553,6 +560,20 @@
     <Compile Include="Admin\Model\News.cs" />
     <Compile Include="Admin\Model\Service.cs" />
     <Compile Include="Controls\ControlSettings.cs" />
+    <Compile Include="Controls\ctlAboutUs.ascx.cs">
+      <DependentUpon>ctlAboutUs.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ctlAboutUs.ascx.designer.cs">
+      <DependentUpon>ctlAboutUs.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ctlClients.ascx.cs">
+      <DependentUpon>ctlClients.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ctlClients.ascx.designer.cs">
+      <DependentUpon>ctlClients.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Controls\ctlContact.ascx.cs">
       <DependentUpon>ctlContact.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -626,7 +647,10 @@
     <None Include="assets\css\lucida_grande_bold-webfont.eot" />
     <None Include="assets\css\lucida_grande_bold-webfont.ttf" />
     <None Include="assets\css\lucida_grande_bold-webfont.woff" />
-    <Content Include="web.config" />
+    <Content Include="table.html" />
+    <Content Include="web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </Content>

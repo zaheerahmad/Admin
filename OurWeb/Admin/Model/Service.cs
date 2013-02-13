@@ -26,7 +26,7 @@ namespace AdminSite.Model
 	}
 
 	/// <summary>
-	/// This is an ActiveRecord class which wraps the tblServices table.
+	/// This is an ActiveRecord class which wraps the tblService table.
 	/// </summary>
 	[Serializable]
 	public partial class Service : ActiveRecord<Service>, IActiveRecord
@@ -94,7 +94,7 @@ namespace AdminSite.Model
 			if(!IsSchemaInitialized)
 			{
 				//Schema declaration
-				TableSchema.Table schema = new TableSchema.Table("tblServices", TableType.Table, DataService.GetInstance("csmDefaultDB"));
+				TableSchema.Table schema = new TableSchema.Table("tblService", TableType.Table, DataService.GetInstance("csmDefaultDB"));
 				schema.Columns = new TableSchema.TableColumnCollection();
 				schema.SchemaName = @"dbo";
 				//columns
@@ -115,7 +115,7 @@ namespace AdminSite.Model
 				TableSchema.TableColumn colvarServiceTitle = new TableSchema.TableColumn(schema);
 				colvarServiceTitle.ColumnName = "serviceTitle";
 				colvarServiceTitle.DataType = DbType.String;
-				colvarServiceTitle.MaxLength = 50;
+				colvarServiceTitle.MaxLength = 150;
 				colvarServiceTitle.AutoIncrement = false;
 				colvarServiceTitle.IsNullable = false;
 				colvarServiceTitle.IsPrimaryKey = false;
@@ -128,7 +128,7 @@ namespace AdminSite.Model
 				TableSchema.TableColumn colvarServiceDescription = new TableSchema.TableColumn(schema);
 				colvarServiceDescription.ColumnName = "serviceDescription";
 				colvarServiceDescription.DataType = DbType.String;
-				colvarServiceDescription.MaxLength = 150;
+				colvarServiceDescription.MaxLength = 500;
 				colvarServiceDescription.AutoIncrement = false;
 				colvarServiceDescription.IsNullable = false;
 				colvarServiceDescription.IsPrimaryKey = false;
@@ -141,7 +141,7 @@ namespace AdminSite.Model
 				TableSchema.TableColumn colvarServiceImage = new TableSchema.TableColumn(schema);
 				colvarServiceImage.ColumnName = "serviceImage";
 				colvarServiceImage.DataType = DbType.String;
-				colvarServiceImage.MaxLength = 50;
+				colvarServiceImage.MaxLength = 150;
 				colvarServiceImage.AutoIncrement = false;
 				colvarServiceImage.IsNullable = true;
 				colvarServiceImage.IsPrimaryKey = false;
@@ -154,7 +154,7 @@ namespace AdminSite.Model
 				BaseSchema = schema;
 				//add this schema to the provider
 				//so we can query it later
-				DataService.Providers["csmDefaultDB"].AddSchema("tblServices",schema);
+				DataService.Providers["csmDefaultDB"].AddSchema("tblService",schema);
 			}
 
 		}
