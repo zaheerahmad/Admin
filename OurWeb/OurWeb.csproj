@@ -324,19 +324,15 @@
     <Content Include="assets\piecemaker2\piecemaker\web\piecemaker.xml" />
     <Content Include="assets\piecemaker2\piecemaker\web\scripts\swfobject\swfobject.js" />
     <Content Include="assets\Styles\Site.css" />
+    <Content Include="Controls\ctlContact.ascx" />
     <Content Include="Controls\ctlHome.ascx" />
     <Content Include="Controls\ctlPortfolio.ascx" />
+    <Content Include="Controls\ctlService.ascx" />
+    <Content Include="CreateThumbnail.aspx" />
     <Content Include="Global.asax" />
     <Content Include="assets\Scripts\jquery-1.4.1-vsdoc.js" />
     <Content Include="assets\Scripts\jquery-1.4.1.js" />
     <Content Include="assets\Scripts\jquery-1.4.1.min.js" />
-    <Content Include="Web.config" />
-    <Content Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
-    <Content Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
     <Content Include="Home.aspx" />
   </ItemGroup>
   <ItemGroup>
@@ -557,6 +553,13 @@
     <Compile Include="Admin\Model\News.cs" />
     <Compile Include="Admin\Model\Service.cs" />
     <Compile Include="Controls\ControlSettings.cs" />
+    <Compile Include="Controls\ctlContact.ascx.cs">
+      <DependentUpon>ctlContact.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ctlContact.ascx.designer.cs">
+      <DependentUpon>ctlContact.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Controls\ctlHome.ascx.cs">
       <DependentUpon>ctlHome.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -570,6 +573,20 @@
     </Compile>
     <Compile Include="Controls\ctlPortfolio.ascx.designer.cs">
       <DependentUpon>ctlPortfolio.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ctlService.ascx.cs">
+      <DependentUpon>ctlService.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ctlService.ascx.designer.cs">
+      <DependentUpon>ctlService.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateThumbnail.aspx.cs">
+      <DependentUpon>CreateThumbnail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateThumbnail.aspx.designer.cs">
+      <DependentUpon>CreateThumbnail.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -609,6 +626,13 @@
     <None Include="assets\css\lucida_grande_bold-webfont.eot" />
     <None Include="assets\css\lucida_grande_bold-webfont.ttf" />
     <None Include="assets\css\lucida_grande_bold-webfont.woff" />
+    <Content Include="web.config" />
+    <Content Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </Content>
+    <Content Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

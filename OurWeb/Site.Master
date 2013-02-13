@@ -35,7 +35,7 @@
 </head>
 
 <body>
-
+<%--<form action="#" runat="server">--%>
 <!-- container -->	
 <div id="container">
 	
@@ -60,24 +60,17 @@
                 <ul class="main">
                     <li><a href="Home.aspx?ctl=0" class="current"><span>Home</span></a>
                     	<ul class="sub curved">
-                        	<li><a href="index-2.html">Fade slider</a></li>
-                        	<li><a href="index-3d.html">3D slider</a></li>    
-                            <li><a href="index-nivo.html">Nivo slider</a></li>                        
+                        	<li><a href="about-us.html">About us</a></li>
+                        	<li><a href="Home.aspx?ctl=2">Services</a></li>    
+                            <li><a href="Home.aspx?ctl=3">Contact</a></li>                       
                         </ul>
                     </li>
-                    <li><a href="#"><span>Pages</span></a>
-						<ul class="sub curved">
-                        	<li><a href="about-us.html">About us</a></li>
-                        	<li><a href="services.html">Services</a></li>    
-                            <li><a href="contact.html">Contact</a></li>                        
-                        </ul>
-					</li>
-                    <li><a href="#"><span>Works</span></a></li>
-                    <li><a href="Home.aspx?ctl=1"><span>Portfolio</span></a>
+                    <li><a href="Home.aspx?ctl=1"><span>Portfolio</span></a></li>
+                    <%--<li><a href="Home.aspx?ctl=1"><span>Portfolio</span></a>
                     	<ul class="sub curved">
                         	<li><a href="blog-post.html">Blog post</a></li>
                         </ul>
-                    </li>
+                    </li>--%>
                     <li><a href="#"><span>Features</span></a>
 						<ul class="sub curved">
                         	<li><a href="addons.html">Addons</a></li>
@@ -140,7 +133,7 @@
 				Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
             </p>
             
-            <a href="contact.html" class="contact"><span></span><img src="assets/images/contact.jpg" alt="" class="curved shaded" /></a>
+            <a href="contact.html" class="contact"><span></span><img src="../upload/Lahore.jpg" alt="" class="curved shaded" width="200" height="69"/></a>
         </div>
         <div class="column-220 float-right">
         	<h5>Design details</h5>
@@ -179,14 +172,15 @@
 <!-- //container -->
 
 <!-- lightboxed login panel -->
-<div id="lightbox"></div>   
+<div id="lightbox">
+</div>   
 
 <div id="loginbox-panel">
-<a href="#" id="lightbox-close"></a>
+    <a href="#" id="lightbox-close"></a>
 	    <div class="alert alert-error" id="divStatusError" runat="server">
             <asp:Label ID="lblError" runat="server"></asp:Label>
         </div>
-    	<form action="#" runat="server">
+    	<form action="#" runat="server" id="frmAdministrator">
 
         	<fieldset>
             	<div class="frame">
@@ -221,6 +215,6 @@
     
 </div>
 <!-- //lightboxes login panel -->
-
+<%--</form>--%>
 </body>
 </html>

@@ -12,12 +12,13 @@ namespace OurWeb
 {
     public partial class SiteMaster : System.Web.UI.MasterPage
     {
+        public static bool showFrmAdministrator = false;
+        public static bool showFrmContact = false;
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            Common.showSideBar = false;
-            divStatusError.Visible = false;
+               
         }
-
         protected void btnSignIn_Click(object sender, EventArgs e)
         {
             string user = txtUser.Text;

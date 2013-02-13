@@ -35,6 +35,7 @@
         <div class="controls">
           <asp:TextBox ID="txtProjectDescription" runat="server" placeHolder="Type Project Description..." TextMode="MultiLine" MaxLength="100" Height="50px" Width="400px"></asp:TextBox>
           <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ControlToValidate="txtProjectDescription" runat="server" ForeColor="Red" Text="*" />
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" ControlToValidate="txtProjectDescription" ValidationExpression=".{20,}" runat="server" ErrorMessage="*Description should be atleast 20 characters long" ForeColor="Red"></asp:RegularExpressionValidator>
         </div>
       </div>
       <div class="control-group">

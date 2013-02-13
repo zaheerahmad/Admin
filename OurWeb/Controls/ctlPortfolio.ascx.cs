@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using OurWeb.Dao;
+using OurWeb.Model;
 
 namespace OurWeb.Controls
 {
@@ -12,13 +13,19 @@ namespace OurWeb.Controls
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            BindAllPortfolio();
         }
 
         public void BindAllPortfolio()
         {
-            PortfolioController portfolioController = new PortfolioController();
+            PortfolioCollection col = new PortfolioController().FetchAll();
+            //rptEvent.DataSource = col;
+            //rptEvent.DataBind();
             
+        }
+        public string GetImgPath(string path, string size)
+        {
+            return "CreateThumbnail.aspx?image=" + path.Remove(0, 1).Remove(0, 1) + "&size=" + size;
         }
     }
 }

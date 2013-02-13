@@ -9,7 +9,7 @@
                    foreach (AdminSite.Model.Service service in serviceController.FetchAll())
                    {
                      %>
-				        <img src="upload/ServicesImages/<%=service.ServiceImage %>" alt="" title="#<%=service.ServiceId %>" width="750" height="400"/>
+				        <img src="upload/ServicesImages/<%=service.ServiceImage %>" alt="" title="#<%=service.ServiceId %>" width="654" height="356"/>
                 <%} %>
             </div>
             <%

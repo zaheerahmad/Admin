@@ -18,9 +18,9 @@ namespace OurWeb
         {
             Home = 0,
             Portfolio = 1,
-            //AddServices = 2,
-            //ManageServices = 3,
-            //AddNews = 4,
+            Services = 2,
+            Contact = 3,
+            //Login = 4,
             //Services = 5,
             //News = 6,
             //ManageNews = 7,
@@ -50,13 +50,13 @@ namespace OurWeb
                 case PageLink.Portfolio:
                     qry = "ctl=1";
                     break;
-                //case PageLink.AddServices:
-                //    qry = "ctl=2";
-                //    break;
-                //case PageLink.ManageServices:
-                //    qry = "ctl=3";
-                //    break;
-                //case PageLink.AddNews:
+                case PageLink.Services:
+                    qry = "ctl=2";
+                    break;
+                case PageLink.Contact:
+                    qry = "ctl=3";
+                    break;
+                //case PageLink.Login:
                 //    qry = "ctl=4";
                 //    break;
                 //case PageLink.Services:

@@ -10,10 +10,9 @@ namespace OurWeb.Controls
         public enum ControlName : int
         {
             Home = 0,
-            Portfolio = 1
-            //Welcome = 1,
-            //AddServices = 2,
-            //ManageServices = 3,
+            Portfolio = 1,
+            Services = 2,
+            Contact = 3,
             //AddNews = 4,
             //Services = 5,
             //News = 6,
@@ -41,14 +40,14 @@ namespace OurWeb.Controls
                 case ControlName.Portfolio:
                     controlName = "ctlPortfolio";
                     break;
-                //case ControlName.ManageServices:
-                //    controlName = "ctlManageServices";
-                //    break;
-                //case ControlName.AddNews:
-                //    controlName = "ctlAddNews";
-                //    break;
-                //case ControlName.Services:
-                //    controlName = "ctlServices";
+                case ControlName.Services:
+                    controlName = "ctlService";
+                    break;
+                case ControlName.Contact:
+                    controlName = "ctlContact";
+                    break;
+                //case ControlName.Login:
+                //    controlName = "ctlLogin";
                 //    break;
                 //case ControlName.News:
                 //    controlName = "ctlNews";

@@ -168,8 +168,8 @@ namespace OurWeb.Admin.Controls
 
                 if (portfolioId > 0)
                 {
-                    Portfolio portfolio = new Portfolio();
-                    portfolio.IsNew = true;
+                    Portfolio portfolio = new Portfolio(portfolioId);
+                    portfolio.IsNew = false;
                     portfolio.ProjectName = txtProjectName.Text;
                     portfolio.ProjectDescription = txtProjectDescription.Text;
                     portfolio.ProjectURL = txtProjectURL.Text;

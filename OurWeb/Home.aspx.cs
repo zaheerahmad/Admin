@@ -14,13 +14,8 @@ namespace OurWeb
         protected void Page_Load(object sender, EventArgs e)
         {
             int control = Utility.GetIntParameter("ctl");
-            //if (control > 0)
-            //{
-            //    Common.Common.showSideBar = true;
-            //}
-            //else
-            //{
-            Utility.LoadPageContent(this.PlaceHolder1, ControlSettings.GetControlFileName((ControlSettings.ControlName)control, Global.MainControlsPath));
+            
+                Utility.LoadPageContent(this.PlaceHolder1, ControlSettings.GetControlFileName((ControlSettings.ControlName)control, Global.MainControlsPath));
         }
     }
 }

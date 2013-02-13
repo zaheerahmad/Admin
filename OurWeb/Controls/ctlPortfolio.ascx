@@ -16,8 +16,8 @@
 <script type="text/javascript">
     var external_pajinate_items_number = 12;
 </script>
-<script type="text/javascript" src="js/jquery.pajinate.js"></script>
-<script type="text/javascript" src="js/jquery-workarounds.js"></script>
+<script type="text/javascript" src="../assets/js/jquery.pajinate.js"></script>
+<script type="text/javascript" src="../assets/js/jquery-workarounds.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
         $('.project-list').pajinate({ items_per_page: external_pajinate_items_number });
@@ -56,25 +56,22 @@
         <div id="content">
         
             
-                <!-- all projects list holder -->
-                <div class="project-list">
-                <div class="page_navigation nav_top float-right"><div></div></div>
-                <div class="clear"></div>
-                
-                    <ul class="list-contents">
-                        <li class="all webdesign">
-                            <% OurWeb.Dao.PortfolioController portfolioController = new OurWeb.Dao.PortfolioController();
-                               foreach (OurWeb.Model.Portfolio portfolio in portfolioController.FetchAll())
-                               {
-                                 %>
-                            <div class="image">
-                                <a href="#" class="more normal"></a>
-                                <img src="upload/PortFolios/<%=portfolio.PortfolioImage %>" alt="" class="curved shaded" />
-                             </div>
+            <!-- all projects list holder -->
+            <div class="project-list">
+            <div class="page_navigation nav_top float-right"><div></div></div>
+            <div class="clear"></div>
+            <ul class="list-contents">
+            <% OurWeb.Dao.PortfolioController controller = new OurWeb.Dao.PortfolioController();
+               foreach (OurWeb.Model.Portfolio portfolio in controller.FetchAll())
+               {
+                 %>
+                <li class="all webdesign">
+                            <div class="image"><a href="#" class="more normal"></a><img src="../upload/PortFolios/<%=portfolio.PortfolioImage %>" alt="" class="curved shaded" width="220" height="125"/></div>
                             <div class="data">
                             <h5><%=portfolio.ProjectName%></h5>
-                            <small><%=portfolio.ProjectURL%></small><br />
-                            <p><%=portfolio.ProjectDescription%></p>
+                            <small><a href="<%=portfolio.ProjectURL%>" target="_blank"><%=portfolio.ProjectURL%></a></small>
+                            <p><%=portfolio.ProjectDescription.Substring(0,20)%></p>
+                            
                             </div>
                             
                             <div class="lightbox-work">
@@ -83,30 +80,28 @@
                                 <div class="work-slider">	
                                 
                                 	<ul class="rotate">
-                                    	<li><a href="#"><img src="images/works/prev1.jpg" alt="" /></a></li>
-                                        <li><a href="#"><img src="images/works/prev2.jpg" alt="" /></a></li>
-                                        <li><a href="#"><img src="images/works/prev3.jpg" alt="" /></a></li>
-                                        <li><a href="#"><img src="images/works/prev4.jpg" alt="" /></a></li>
+                                    	<li><a href="#"><img src="../upload/PortFolios/<%=portfolio.PortfolioImage %>" alt="" width="660" height="375"/></a></li>
+                                        <%--<li><a href="#"><img src="../assets/images/works/prev2.jpg" alt="" /></a></li>
+                                        <li><a href="#"><img src="../assets/images/works/prev3.jpg" alt="" /></a></li>
+                                        <li><a href="#"><img src="../assets/images/works/prev4.jpg" alt="" /></a></li>--%>
                                     </ul>
                                 <div class="clear"></div>
                                 <div class="controls controls0"></div>
                                 </div>
                                 
-                                <h4>Giant Mutant Birds</h4>
-                                <small>Web design / print</small>
-                                <p>
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
-                                </p>
+                                <h4><%=portfolio.ProjectName%></h4>
+                            <small><a href="<%=portfolio.ProjectURL%>" target="_blank"><%=portfolio.ProjectURL%></a></small>
+                            <p><%=portfolio.ProjectDescription%></p>
                             <div class="clear"></div>
                             </div>
-                            <%} %>
                         </li>
-                    </ul>
-                    <div class="clear"></div>
-                <div class="page_navigation nav_bottom float-right"><div></div></div>	
-                <div class="clear"></div>    
-                </div>
-                <!-- //all projects list holder -->
+                        <%} %>
+                        </ul>
+            <div class="clear"></div>
+            <div class="page_navigation nav_bottom float-right"><div></div></div>	
+            <div class="clear"></div>    
+            </div>
+            <!-- //all projects list holder -->
 
             
             <div class="clear"></div>
