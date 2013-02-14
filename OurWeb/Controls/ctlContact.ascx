@@ -1,11 +1,41 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ctlContact.ascx.cs" Inherits="OurWeb.Controls.ctlContact" %>
 <script type="text/javascript" src="../assets/js/jquery.form.js"></script>
-<%--<script type="text/javascript">
-    $(document).ready(function () {
-        var options = { target: "#alert" };
-        $("#form-contact").ajaxForm(options);
-    }); 
-</script>--%>
+<script type="text/javascript">
+    function SendEmail() {
+        var inputName = document.getElementById("txtName").value;
+        var inputEmail = document.getElementById("email").value;
+        var inputMessage = document.getElementById("message").value;
+
+        if (inputName == "" || inputEmail == "" || inputMessage == "") {
+            alert("All Fields need to be Filled In order to Send Message");
+        }
+        else {
+
+            SendData(inputName, inputEmail, inputMessage);
+        }
+    }
+
+    function SendData(name, email, message) {
+        var xmlhttp;
+        if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        }
+        else {// code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange = function () {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+//                document.getElementById("myDiv").innerHTML = xmlhttp.responseText;
+            }
+        }
+        xmlhttp.open("POST", "../SendEmail.aspx?name="+name+"&email="+email+"&message="+message, true);
+        xmlhttp.send();
+    }
+    
+//    $(document).ready(function () {
+//       $("")
+//    }); 
+</script>
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 <script type="text/javascript" src="../assets/js/googlemap-config.js"></script>
 <script type="text/javascript" src="../assets/js/jquery-workarounds.js"></script>
@@ -79,7 +109,7 @@
                     
                     <div class="form">
                     <div class="message"><div id="alert"></div></div>
-                    <form action="" method="post" ID="frmContact">
+                    <form id="frmContact" action="Home.aspx?ctl=3">
                         <div>
                             <label for="txtName">Name:</label>
                             <input type="text" value="" class="input-text" name="name" id="txtName" />
@@ -99,7 +129,7 @@
                             <asp:RequiredFieldValidator ID="rfvTextMessage" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="txtMessage"></asp:RequiredFieldValidator>--%>
                         </div>
                         <div>
-                            <input type="submit" value="Send message" class="button small float-right" />
+                            <input type="button" value="Send message" class="button small float-right" onclick="SendEmail()"/>
                             <%--<asp:Button ID="btnSubmitMessage" runat="server" 
                                 class="button small float-right" Text="Send Message" 
                                 onclick="btnSubmitMessage_Click" />--%>

@@ -32,13 +32,13 @@
                 <ItemTemplate>
                 <table width="100%">
                     <tr>
-                        <td style="width:auto">
+                        <td style="width:30%">
                             <%# Eval("projectName")%>
                         </td>
-                        <td style="width:auto">
+                        <td style="width:50%">
                             <%# Eval("projectURL") %>
                         </td>
-                        <td style="width:auto">
+                        <td style="width:30%">
                             <img src='../upload/PortFolios/<%#Eval("portfolioImage")%>' alt="No Image" width="100" height="120"/>
                         </td>
                     </tr>

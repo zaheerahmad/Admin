@@ -35,7 +35,6 @@
 </head>
 
 <body>
-<%--<form action="#" runat="server">--%>
 <!-- container -->	
 <div id="container">
 	
@@ -181,7 +180,7 @@
 	    <div class="alert alert-error" id="divStatusError" runat="server">
             <asp:Label ID="lblError" runat="server"></asp:Label>
         </div>
-    	<form action="#" runat="server" id="frmAdministrator">
+    	<form runat="server" id="frmAdministrator" action="#">
 
         	<fieldset>
             	<div class="frame">
@@ -216,6 +215,5 @@
     
 </div>
 <!-- //lightboxes login panel -->
-<%--</form>--%>
 </body>
 </html>
